@@ -20,25 +20,426 @@
         % TODO
 
     \subsection{Strumenti e piattaforme per il Prompt Engineering}
+        Si è detto che il prompt engineering si concentra sulla progettazione e formulazione di input testuali per guidare i LLM verso la produzione di output desiderato. Tale processo può essere facilitato dall'uso di strumenti e piattaforme opportune. Nel seguito viene riportata una lista, anche se parziale, di tali piattaforme. 
+
+        \begin{enumerate}
+            \item \textbf{OpenAI GPT-3 e GPT-4}: modelli di linguaggio generativo di OpenAI, noti per generare testo coerente e contestuale da prompt semplici. Gli utenti possono interagire inviando prompt tramite una interfaccia di chat o API e ricevere risposte. Ricercatori e sviluppatori sperimentano con diversi prompt per studiare l'efficacia comunicativa e perfezionare il prompt engineering: \url{https://openai.com/}. 
+
+            \item \textbf{Anthropic Claude}: modello di linguaggio generativo costituzionale sviluppato per generare testo fluido e allineato con i valori umani. Utenti, ricercatori e sviluppatori possono interagire in modalità analoga a GPT, inviando richieste testuali e ricevendo risposte dettagliate. Caratteristica distintiva di Claude è il suo addestramento basato sull'approccio Constitutional AI di Anthropic, mirato a sviluppare sistemi di IA che esibiscano comportamenti sicuri, etici e conformi ai valori e agli obiettivi delineati durante l'addestramento: \url{https://www.anthropic.com/}. 
+
+            \item Gemini?
+
+            \item \textbf{Hugging Face Transformers}: libreria che offre accesso a centinaia di modelli NLP pre-addestrati come BERT, GPT-2, T5 e altri. Gli sviluppatori possono implementare e testare rapidamente vari modelli con prompt personalizzati, facilitando esperimenti e iterazioni veloci: \url{https://huggingface.co/}. 
+
+            \item \textbf{LangChain}: libreria open source che facilita l'applicazione di modelli linguistici a problemi pratici, integrando ragionamento e dialogo. Gli sviluppatori possono costruire applicazioni di prompt engineering per guidare modelli in conversazioni complesse e interazioni utente: \url{https://www.langchain.com/}. 
+
+            \item \textbf{Google Cloud Natural Language API}: fornisce accesso a modelli di analisi linguistica per comprendere sentimenti, entità e struttura sintattica del testo. Sebbene non specificamente per il prompt engineering, può essere utilizzata per analizzare e migliorare la qualità di prompt e risposte nel contesto di applicazioni più ampie: \url{https://cloud.google.com/natural-language}. 
+        \end{enumerate}
+
+        Tali strumenti sono utilizzati in vari settori, dall'arte e design alla produzione di contenuti, passando per la musica e altro ancora. Facciamo, in conclusione di questo paragrafo, alcune riflessioni su alcuni criteri per la scelta di strumenti e piattaforme. 
+
+        \begin{itemize}
+            \item Costo: Alcuni strumenti possono essere costosi, specialmente per l'uso a livello aziendale. 
+            \item Accessibilità e usabilità: È importante considerare quanto sia facile imparare a usare lo strumento e integrarlo nei propri flussi di lavoro. 
+            \item Supporto e comunità: Piattaforme con una vasta comunità e buon supporto sono preferibili, poiché facilitano la risoluzione di problemi e l'apprendimento collaborativo. 
+        \end{itemize}
+
+        In conclusione, il prompt engineering è un'area di grande interesse e attività, e l'utilizzo di strumenti e piattaforme adeguati può significativamente migliorare la qualità e l'efficacia dei modelli di linguaggio. Questi strumenti aiutano gli sviluppatori a sperimentare e perfezionare i loro approcci, contribuendo al progresso dell'intero campo del NLP. 
+        
     \subsection{Strumenti di IA Generativa disponibili oggi sul mercato}
+        Non è possibile fornire un elenco esatto degli strumenti di IA generativa disponibili sul mercato, in quanto l'ambito della tecnologia IA è in continua evoluzione e espansione. Tuttavia, è possibile delineare alcune delle categorie principali di strumenti di AI Gen con alcuni esempi: 
+
+        \begin{itemize}
+            \item Generazione di testi:
+            \begin{itemize}
+                \item \textbf{GPT-3 di OpenAI}: Per generare testi coerenti e contestualmente rilevanti su una vasta gamma di argomenti.
+                \item \textbf{BERT di Google}: Per migliorare la comprensione del NL nei motori di ricerca.
+                \item \textbf{T5 (Text-To-Text Transfer Transformer)}: Può essere addestrato a svolgere compiti di traduzione, riassunto, classificazione di testo e molto altro.
+            \end{itemize}
+            \item Generazione di immagini e grafica:
+            \begin{itemize}
+                \item \textbf{DAVINCI di OpenAI}: Sistema per generare immagini dettagliate da descrizioni testuali.
+                \item \textbf{Artbreeder}: Piattaforma che permette di creare immagini attraverso la combinazione di caratteristiche genetiche in un'interfaccia intuitiva.
+                \item \textbf{RunwayML}: Fornisce strumenti AI per creativi, permettendo loro di implementare algoritmi di machine learning nei loro flussi di lavoro visivi senza necessità di codifica.
+            \end{itemize}
+            \item Musica e generazione audio:
+            \begin{itemize}
+                \item \textbf{Jukebox di OpenAI}: Modello per generare musica, comprese melodie e testi, in vari stili.
+                \item \textbf{AIVA (Artificial Intelligence Virtual Artist)}: Compone musica sinfonica e per videogiochi.
+            \end{itemize}
+            \item Video e Animazione:
+            \begin{itemize}
+                \item \textbf{Synthesia}: Crea video in cui un avatar personalizzato parla con la voce sintetizzata, ideale per video educativi o di marketing.
+                \item \textbf{DeepBrain AI}: Crea video in cui figure umane virtuali interagiscono in tempo reale.
+            \end{itemize}
+            \item Contenuto per il Web e pubblicità:
+            \begin{itemize}
+                \item \textbf{Persado}: Utilizza IA per generare testi persuasivi ottimizzati per pubblicità e marketing.
+                \item \textbf{Copysmith}: Piattaforma che sfrutta GPT-3 per generare contenuti pubblicitari, blog e altro materiale scritto.
+            \end{itemize}
+            \item Giochi e Intrattenimento:
+            \begin{itemize}
+                \item \textbf{AI Dungeon}: Un gioco di avventura testuale alimentato da AI che genera contenuti dinamici in risposta alle scelte dei giocatori.
+            \end{itemize}
+        \end{itemize}
+
+        Questi sono solo alcuni esempi delle tecnologie AI Gen disponibili sul mercato. Ogni categoria ha una pletora di prodotti sviluppati da start-up e grandi aziende, ognuno con i propri unici punti di forza e aree di applicazione. Con l'evoluzione continua delle capacità di IA e machine learning, il numero e la sofisticatezza di questi strumenti sono destinati a crescere ulteriormente. 
+    
         \subsubsection{Applicazioni pratiche}
+            L'importanza del prompt engineering si manifesta nella sua capacità di influenzare l'output di modelli di IA, rendendolo pertinente e utile per molteplici contesti operativi. Per esempio, nel settore educativo, in cui prompt ben strutturati possono aiutare i modelli di IA a fornire spiegazioni dettagliate o semplificate a seconda del livello di comprensione degli studenti, oppure nel commercio, in cui prompt ben strutturati possono personalizzare le interazioni con i clienti per migliorare l'esperienza utente e incrementare la soddisfazione del cliente.  
+
+            Riportiamo nel seguito alcuni esempi pratici di prompt specifici per ottenere risposte utili e personalizzate in vari contesti, utilizzando ChatGPT e Claude. 
+
+            \begin{itemize}
+                \item \textbf{Spiegazione semplificata di concetti scientifici}
+                \begin{itemize}
+                    \item Prompt: \textit{``Spiega il concetto di fotosintesi a un bambino di 10 anni.''}
+                    \item Utilizzo: Rende comprensibili concetti scientifici complessi a giovani studenti o a chi non ha una formazione specifica in biologia.
+                \end{itemize}
+                
+                \item \textbf{Comprensione di concetti complessi}
+                \begin{itemize}
+                    \item Prompt: \textit{``Puoi spiegarmi il principio di incertezza di Heisenberg in termini semplici?''}
+                    \item Utilizzo: Aiuta gli studenti a comprendere concetti fisici avanzati in modo più accessibile.
+                \end{itemize}
+                
+                \item \textbf{Aiuto nei compiti}
+                \begin{itemize}
+                    \item Prompt: \textit{``Come posso risolvere questa equazione differenziale: }\textless{}segue descrizione dell’equazione\textgreater{}\textit{?''}
+                    \item Utilizzo: Fornisce passaggi dettagliati per aiutare gli studenti con specifici problemi matematici.
+                \end{itemize}
+                
+                \item \textbf{Preparazione agli esami}
+                \begin{itemize}
+                    \item Prompt: \textit{``Crea un quiz su `Il Gattopardo' di Tomasi di Lampedusa per prepararmi all'esame di letteratura italiana.''}
+                    \item Utilizzo: Genera domande di pratica che possono aiutare gli studenti a testare la loro comprensione dei materiali di studio.
+                \end{itemize}
+                
+                \item \textbf{Supporto clienti}
+                \begin{itemize}
+                    \item Prompt: \textit{``Il mio volo è stato cancellato, cosa posso fare?''}
+                    \item Utilizzo: Fornisce informazioni immediate e soluzioni ai clienti che affrontano problemi di viaggio.
+                \end{itemize}
+                
+                \item \textbf{Raccomandazioni di prodotti}
+                \begin{itemize}
+                    \item Prompt: \textit{``Suggeriscimi alcuni libri di fantascienza basati sui bestseller recenti.''}
+                    \item Utilizzo: Aiuta i clienti a scoprire nuovi prodotti basati sui loro interessi e sulle tendenze attuali.
+                \end{itemize}
+                
+                \item \textbf{Organizzazione personale}
+                \begin{itemize}
+                    \item Prompt: \textit{``Aiutami a pianificare il mio itinerario di viaggio per una settimana a Tokyo.''}
+                    \item Utilizzo: Fornire suggerimenti per attrazioni, cibo, e trasporti, personalizzando l'esperienza di viaggio.
+                \end{itemize}
+                
+                \item \textbf{Risoluzione di problemi}
+                \begin{itemize}
+                    \item Prompt: \textit{``Come posso migliorare la ricezione del Wi-Fi in casa?''}
+                    \item Utilizzo: Offre consigli tecnici per migliorare la connettività Internet domestica.
+                \end{itemize}
+                
+                \item \textbf{Creatività e scrittura}
+                \begin{itemize}
+                    \item Prompt: \textit{``Scrivi il paragrafo introduttivo di un racconto che inizia con un risveglio in una città sconosciuta.''}
+                    \item Utilizzo: Stimola la creatività e fornisce un punto di partenza per scrittori e appassionati di narrativa.
+                \end{itemize}
+                
+                \item \textbf{Supporto nella progettazione di sistemi}: un assistente virtuale che può guidarti nella progettazione, implementazione e verifica di sistemi. Per esempio, vogliamo progettare un antifurto basato su Arduino. In questo caso, il processo è più articolato e occorre prevedere diversi prompt per diverse fasi del progetto. Vediamo come procedere. 
+                \begin{itemize}
+                    \item \textbf{Definizione del progetto}: Definire chiaramente l'obiettivo del progetto.
+                    \begin{itemize}
+                        \item Prompt: \textit{``Quali sono i componenti essenziali per un sistema antifurto basato su Arduino?''}
+                        \item Prompt: \textit{``Quali sensori sono più adatti per rilevare intrusioni in un ambiente domestico?''}
+                        \item Utilizzo: ricevere una lista di componenti hardware necessari: sensori di movimento (PIR), sensori di contatto per porte e finestre, moduli di comunicazione (come WiFi o GSM).
+                    \end{itemize}
+                    \item \textbf{Ricerca e selezione componenti}: Dopo aver definito i componenti, si possono chiedere informazioni. 
+                    \begin{itemize}
+                        \item Prompt: \textit{``Come funziona un sensore PIR con Arduino?''}
+                        \item Prompt: \textit{``Quali librerie Arduino posso usare per gestire un modulo GSM?''}
+                        \item Utilizzo: ricevere esempi di codice, spiegazioni sul funzionamento dei sensori e suggerimenti su librerie e risorse utili per il progetto.
+                    \end{itemize}
+                    \item \textbf{Schema di collegamento}: Chiedere indicazioni per creare uno schema di collegamento dei componenti.  
+                    \begin{itemize}
+                        \item Prompt: \textit{``Come collego un sensore PIR a un Arduino Uno?''}
+                        \item Prompt: \textit{``Qual è lo schema di collegamento per un modulo GSM con Arduino?''}
+                        \item Utilizzo: sul collegamento dei vari componenti elettronici; ricevere anche suggerimenti su pratiche ottimali per la sicurezza e la stabilità del sistema.
+                    \end{itemize}
+                    \item \textbf{Scrittura del Codice}: Chiedere aiuto per la scrittura del codice necessario per il funzionamento del sistema.
+                    \begin{itemize}
+                        \item Prompt: \textit{``Puoi aiutarmi a scrivere un codice Arduino per un sistema antifurto che attivi un allarme quando un sensore PIR rileva movimento?''}
+                        \item Prompt: \textit{``Come posso programmare Arduino per inviare un SMS di allarme tramite modulo GSM quando si attiva il sensore di porta?''}
+                        \item Utilizzo: ricevere snippet di codice o guide passo passo per programmare le funzionalità desiderate dell’antifurto.
+                    \end{itemize}
+                    \item Test e Debugging
+                    \begin{itemize}
+                        \item Prompt: \textit{``Quali sono le tecniche comuni per il debugging di un progetto Arduino?''}
+                        \item Prompt: \textit{``Come posso testare l'efficacia del mio sistema antifurto prima di installarlo?''}
+                        \item Utilizzo: ricevere suggerimenti per il testing e il debugging del sistema.
+                    \end{itemize}
+                \end{itemize}
+            \end{itemize}
+
+            In sintesi, il prompt engineering non solo migliora la funzionalità e l'accessibilità dei sistemi di IA, ma apre anche nuove strade per la loro applicazione pratica in campi sempre più ampi, evidenziando l'intersezione tra la tecnologia avanzata e le esigenze umane quotidiane.  
+            
     \subsection{Concetti base dell’architettura Transformer}
+        Prima che emergessero in modo ``dirompente'' i modelli basati sull'architettura Transformer, vi erano vari tipi di Large Language Models (LLM) che utilizzavano altre architetture di rete neurale. Alcuni dei più noti sono basati su architetture di Reti Neurali Ricorrenti (Recurrent Neural Network - RNN) e le loro varianti come LSTM (Long Short-Term Memory) e GRU (Gated Recurrent Units). Questi modelli erano ampiamente utilizzati per il trattamento di sequenze di dati, in particolare nel linguaggio naturale (Natural Language – NL).  
+
+        Anche se i modelli basati su Transformer sono oggi dominanti nel campo dell'elaborazione del linguaggio naturale (Natural Language Processing – NLP) grazie alla loro maggiore efficienza e capacità di gestire lunghe dipendenze,  questi modelli più vecchi hanno ancora applicazioni valide e continuano ad essere oggetto di ricerca e sviluppo per specifici scenari d’uso, come generazione di testo, completamento automatico del testo, riconoscimento del parlato, analisi dei sentimenti, traduzione automatica. Questi modelli dimostrano che, nonostante l'efficienza dei Transformer in molte aree, le RNN e le loro varianti rimangono tecniche preziose e rilevanti per molti compiti di elaborazione delle sequenze. Ogni tipo di modello ha suoi punti di forza e sue limitazioni, e la scelta del modello più adatto può dipendere da diversi fattori, tra cui natura del compito, disponibilità di dati di addestramento, risorse computazionali disponibili.  
+        
+        Il concetto di ``prompt engineering'' è più comunemente associato con i modelli di linguaggio più recenti basati su Transformer, come GPT o Claude, che sono in modo particolare sensibili e reattivi agli input specifici (prompt) che ricevono. Questo è dovuto alla loro capacità di generare risposte coerenti e dettagliate basate su enormi quantità di dati di addestramento. Tuttavia, la tecnica di fornire input specificamente formulati per ottenere i risultati desiderati può essere applicata, in una certa misura, anche ai modelli basati su RNN, LSTM e GRU.  In generale, il prompt engineering in contesti che non includono modelli Transformer è meno accentuato e spesso non è etichettato esplicitamente come tale. Tuttavia, il principio di ottimizzare e adattare gli input per migliorare le prestazioni del modello è un concetto fondamentale nel machine learning e può essere applicato a qualsiasi tipo di modello, compresi RNN, LSTM e GRU. 
+        
     \subsection{LLM basati su architettura Transformer}
+        Alcuni dei principali modelli basati su architettura Transformer sono: 
+        \begin{itemize}
+            \item \textbf{BERT (Bidirectional Encoder Representations from Transformers)} è utilizzato principalmente per compiti di comprensione del testo, come analisi del sentimento, classificazione dei testi e domande/risposte. Alcune varianti:  
+            \begin{itemize}
+                \item \textbf{RoBERTa (Robustly Optimized BERT Approach)}: variante ottimizzata tramite un training su un data set più grande e per più tempo rispetto a BERT, migliorando la comprensione del testo; 
+                
+               \item \textbf{ DistilBERT}: versione semplificata e ottimizzata progettata per essere più veloce e leggera, pur mantenendo una buona parte delle capacità del modello originale. È particolarmente utile per applicazioni che richiedono modelli più leggeri e veloci;  
+                
+                \item \textbf{XLNet}: modello che supera alcune limitazioni di BERT utilizzando una permutazione dell'ordine delle parole nel testo durante il training, permettendo al modello di apprendere meglio il contesto e migliorando le prestazioni su compiti come completamento di frasi e domande/risposte.   
+            \end{itemize}
+            
+            \item \textbf{GPT (Generative Pre-trained Transformer)} e le sue versioni successive, come GPT-2, GPT-3, e GPT-4, sono modelli generativi che possono produrre testi coerenti e contestualmente appropriati basandosi su un prompt iniziale;   
+            
+            \item \textbf{T5 (Text-to-Text Transfer Transformer)}: modello che interpreta tutte le attività di NLP come un problema di trasformazione del testo da un formato all'altro, rendendolo estremamente versatile per vari compiti come la traduzione automatica, il riassunto di testi e le domande e risposte. 
+            
+            \item \textbf{Claude}: modello di linguaggio sviluppato da Anthropic, startup di IA co-fondata da ex ricercatori di OpenAI. Questo modello segue le orme di altri modelli di linguaggio di grandi dimensioni, come GPT di OpenAI e BERT di Google. Claude è progettato per essere un modello di conversazione più sicuro e meno propenso a generare risposte dannose o inesatte, grazie a miglioramenti nell'addestramento e nella sintonizzazione del modello, mantenendo l'efficienza dell'architettura transformer per gestire compiti di NLP complessi. 
+        \end{itemize}
+        
         \subsubsection{LLM, architettura Transformer e machine learning}
+            LLM e architettura Transformer sono strettamente correlati al machine learning (ML), con riferimento particolare all’apprendimento profondo (deep learning), sotto-categoria di algoritmi ML caratterizzata dall'uso di reti neurali con molteplici livelli di elaborazione.  
+            \begin{itemize}
+                \item \textbf{Reti Neurali Profonde}: I LLM, come GPT, BERT, Claude, … sono basati su reti neurali profonde, che sono uno degli strumenti principali nel ML per modellare complessi pattern nei dati. Queste reti apprendono da vasti dataset per generalizzare nuove informazioni che non sono state viste durante l'addestramento.  
+                
+                \item \textbf{Architetture avanzate}: L'architettura Transformer, che è al cuore di molti LLM, rappresenta un'innovazione significativa nel ML per il NL. I Transformer utilizzano un meccanismo di attenzione (citato in precedenza) che permette al modello di considerare l'intera sequenza di input contemporaneamente, migliorando la capacità di gestire dati sequenziali rispetto ai precedenti modelli di rete neurale.  
+                
+                \item \textbf{Training e inferenza}: Nel ML, il processo di addestramento consiste nell'ottimizzare i parametri della rete neurale (pesi e bias) attraverso la minimizzazione di una funzione di perdita, che misura quanto bene il modello predice il dato di output rispetto all'output atteso. I LLM sono tipicamente addestrati su compiti di predizione del testo seguente dato un testo precedente, per poi essere utilizzati in una varietà di applicazioni di inferenza, come completamento automatico di testo, risposta a domande, e traduzione.  
+                
+                \item \textbf{Scalabilità e prestazioni}: I Transformer hanno dimostrato di scalare efficacemente con l'aumentare delle dimensioni del modello e della quantità di dati di addestramento, portando a miglioramenti sostanziali nelle prestazioni. Questo ha reso i LLM basati su Transformer particolarmente potenti, poiché possono trattare e generare linguaggio con una naturalezza e una fluidità che modelli precedenti non erano capaci di raggiungere. 
+            \end{itemize}
+            
+            In conclusione, i LLM e i modelli basati su Transformer sono esempi di come il ML possa essere applicato per risolvere problemi complessi di NLP, sfruttando l'apprendimento profondo per interpretare, generare e interagire con il linguaggio umano in modo sempre più sofisticato. 
+        
         \subsubsection{Caratteristiche rilevanti dei LLM}
+            Questi modelli hanno rivoluzionato il modo in cui interagiamo con le macchine, permettendo sviluppi significativi in applicazioni come gli assistenti virtuali, gli strumenti di traduzione automatica, le piattaforme di assistenza clienti automatizzate e molti altri sistemi basati sul linguaggio. Ecco alcune caratteristiche rilevanti su queste categorie di modelli:  
+            \begin{enumerate}
+                \item
+                    \textbf{Dimensione e complessità}: Gli LLM sono noti per il loro numero elevato di parametri e dati di addestramento, che può variare da centinaia di milioni a diversi miliardi.  
+            
+                    I parametri sono fondamentalmente le ``regole di apprendimento'' che il modello utilizza per fare previsioni e generazioni dopo essere stato addestrato.  
+                    
+                    Un ``parametro'' in un modello di machine learning può essere pensato come una variabile all'interno del modello che viene adattata durante il processo di addestramento.  
+                    
+                    Ad esempio, modelli come GPT-3 hanno fino a 175 miliardi di parametri.  
+                    
+                    Maggiore è il numero di parametri, maggiore è la capacità del modello di apprendere da una vasta gamma di dati e catturare relazioni più complesse all'interno di quel dataset; Con troppi parametri, c'è il rischio che il modello si adatti troppo bene ai dati di addestramento, perdendo la capacità di generalizzare bene su nuovi dati (overfitting); I modelli con molti parametri richiedono più potenza di calcolo per l'addestramento e l'inferenza, il che può aumentare significativamente i costi e l'impatto ambientale.  
+                    
+                    La ``dimensione e complessità'' si concentra quindi sulle caratteristiche interne del modello e sul suo potenziale teorico di apprendimento basato sulla quantità di parametri.  
+                    
+                    Questo ampio numero di parametri permette ai LLM di catturare e modellare sottili sfumature linguistiche e complessità. Addestramento su dataset di grandi dimensioni
+                
+                \item
+                    \textbf{Addestramento su dataset di grandi dimensioni}: Gli LLM sono addestrati su vasti corpus di testo che spesso comprendono una vasta gamma di informazioni raccolte da internet o da altre fonti selezionate. 
+            
+                    Addestrare su vasti dataset permette al modello di essere esposto a un'ampia varietà di informazioni, lingue, argomenti e stili di scrittura, aumentando la sua utilità in applicazioni diverse; L'esposizione a diversi tipi di dati durante l'addestramento può aiutare il modello a generalizzare meglio, cioè a performare bene su tipi di dati che non ha visto durante l'addestramento; Sebbene un vasto dataset possa migliorare la generalizzazione, può anche introdurre o perpetuare bias esistenti nei dati, influenzando le performance e l'equità del modello.  
+                    
+                    L'``addestramento su dataset di grandi dimensioni'' riguarda il modo in cui il modello viene esposto a varie informazioni e come queste informazioni formano la base della sua ``comprensione'' e delle sue capacità di previsione.  
+                    
+                    Questo addestramento estensivo permette ai modelli di avere una conoscenza più ampia del linguaggio umano e delle sue varie applicazioni. 
+
+                \item
+                    \textbf{Versatilità}: Grazie alla loro ampia conoscenza generale e capacità di modellare il linguaggio, gli LLM sono estremamente versatili e possono essere utilizzati per una varietà di compiti di elaborazione del linguaggio, da semplici compiti come la classificazione del testo a compiti più complessi come generazione di testo coerente e contestualmente appropriato.   
+
+                \item
+                    \textbf{Adattabilità}: Nonostante la loro ampia formazione, gli LLM possono essere ulteriormente adattati o specializzati su compiti o domini specifici attraverso tecniche come il ``fine-tuning''. Questo li rende utili in settori specifici come la legge, la medicina o il servizio clienti, dove è necessaria una comprensione specializzata. 
+
+                \item
+                    \textbf{Problemi e sfide}: Nonostante i loro vantaggi, gli LLM presentano anche sfide (che discuteremo più avanti), come gestione del bias nei dati, produzione di risposte errate o fuorvianti e la loro grande necessità di risorse per l'addestramento e l'esecuzione, che li rende meno sostenibili dal punto di vista ambientale ed economico rispetto a modelli più piccoli. 
+            \end{enumerate}
+             
         \subsubsection{Come funzionano i LLM}
+            I LLM sono una componente fondamentale dell'evoluzione recente nel campo dell'IA, guidando molti degli sviluppi più innovativi nell'elaborazione del NL e nelle interazioni uomo-macchina. Per capire come funzionano in termini semplici, possiamo suddividerne il funzionamento nelle seguenti tre fasi principali: 
+            \begin{enumerate}
+                \item
+                    \textbf{Addestramento}: Gli LLM sono addestrati su grandi quantità di testo; Questo può includere libri, articoli, siti web, e altro ancora.  Durante l'addestramento, il modello analizza i testi per capire come le parole si combinano per formare frasi, come le frasi costruiscono paragrafi, e come i paragrafi possono esprimere idee complesse.  Il modello impara le regole grammaticali, i significati delle parole, e le relazioni tra di esse. Questo processo richiede enormi quantità di dati e capacità di calcolo. Alcune note meritano di essere aggiunte relativamente ad particolare tipo di addestramento denominato  da Anthropic con il temine di ``costituzionale''. 
+            
+                    L'addestramento costituzionale (o constitutional training) è un approccio utilizzato nell'addestramento di alcuni modelli di IA, per cercare di migliorarne l'affidabilità, la sicurezza e l'allineamento con determinati valori e principi etici. In sostanza, durante la fase di addestramento vengono aggiunti al dataset esempi ed istruzioni esplicite che codificano determinate regole di comportamento, valori deontologici, conoscenze fattuali affidabili e restrizioni su ciò che il modello dovrebbe o non dovrebbe fare nelle sue risposte e output. Lo scopo è quello di ``costituzionalizzare'' il modello, ovvero renderlo più stabile, coerente e ancorato a principi di base concordati, riducendo il rischio di derive indesiderate o pericolose quando viene utilizzato. È un tentativo di instillare una sorta di "costituzione" comportamentale nel modello fin dalla sua formazione. Questo approccio non elimina del tutto il rischio di allucinazioni o di altre problematiche nei modelli di IA (che discuteremo nel dettaglio nel seguito del documento), ma mira a limitarne la portata indirizzando il modello verso risposte più sicure, etiche e costituzionalmente allineate con valori stabiliti. 
+
+                \item
+                    \textbf{Apprendimento}: Mentre analizza il testo, il modello costruisce una sorta di ``memoria interna'' o una rappresentazione del linguaggio. Utilizza strutture matematiche chiamate vettori per rappresentare concetti e parole. Più il modello incontra una parola o una struttura in vari contesti, meglio riesce a comprendere il suo uso e significato. Il concetto di vettori di parole (``word embedding'') è una parte fondamentale del meccanismo di apprendimento e rappresentazione del linguaggio. Questi vettori sono rappresentazioni matematiche di alta dimensione che cercano di catturare il significato delle parole, i loro usi e le loro relazioni con altre parole. Ogni vettore è essenzialmente un array di numeri che il modello di linguaggio impara durante il suo addestramento. Per fornire un esempio concreto, ecco come potrebbe essere rappresentato il vettore per la frase ``Cappuccetto Rosso'' dopo che il modello ha letto la fiaba.  
+
+                    È importante notare che il vettore effettivo sarebbe molto più complesso e ad alta dimensione (tipicamente dimensioni dell'ordine delle centinaia), ma qui forniamo una versione semplificata per illustrare il concetto: 
+
+                    \texttt{["Cappuccetto Rosso"] = [0.85, -0.32, 0.91, ..., 0.45]}
+
+                    In questa rappresentazione semplificata, ogni numero nel vettore rappresenta un aspetto del significato associato alla frase "Cappuccetto Rosso" nel contesto della fiaba. Questi potrebbero includere:
+                    \begin{itemize}
+                        \item \texttt{0.85}: forte correlazione con temi di innocenza o vulnerabilità. 
+                        \item \texttt{-0.32}: una leggera correlazione negativa con concetti di sicurezza o protezione. 
+                        \item \texttt{0.91}: alta correlazione con il tema della pericolosità o dell'inganno (riferendosi al lupo). 
+                        \item ...
+                        \item \texttt{0.45}: una moderata correlazione con l'avventura o il viaggio. 
+                    \end{itemize}
+                    Questa fase permette al modello di catturare e memorizzare la complessità del linguaggio umano.  
+
+                \item
+                    \textbf{Generazione}: Quando viene utilizzato, il modello riceve un ``prompt'' dall'utente, che può essere una frase, una domanda o anche solo una parola. Basandosi su ciò che ha appreso durante l'addestramento, il modello cerca di prevedere e generare la risposta o il testo più probabile che segue l'input. Il modello fa questo cercando tra le rappresentazioni interne che ha costruito e selezionando le parole che ritiene più appropriate per completare il testo.  
+            
+                    Questo processo si basa sulla probabilità: il modello calcola quale parola (o parole) ha la maggiore probabilità di seguire logicamente l'input basato sui testi che ha studiato durante l'addestramento.  
+                    
+                    Il modello utilizza questi numeri per determinare come ``Cappuccetto Rosso'' si relaziona a altre parole o frasi nel testo. Per esempio, se il modello deve completare una frase iniziata con ``Cappuccetto Rosso'', utilizzerà il vettore per prevedere le parole che probabilmente seguiranno basandosi sulle relazioni apprese. In pratica, questi vettori sono generati e utilizzati dai modelli di linguaggio senza che l'utente finale debba interagire direttamente con essi. La manipolazione e l'interpretazione di questi vettori avviene internamente nel modello, che usa algoritmi complessi per ottimizzare e adattare questi vettori durante l'addestramento per migliorare la loro capacità di rappresentare accuratamente il linguaggio umano. 
+            \end{enumerate}
+            
+            In sintesi, i LLM funzionano analizzando grandi quantità di testo per costruire una comprensione interna del linguaggio, che poi utilizzano per produrre testo che è coerente e pertinente agli input ricevuti. Questi modelli sono potentemente versatili, permettendo di generare testo in molti stili e formati diversi, e di rispondere a una vasta gamma di richieste e domande. 
+            
+            La progettazione di prompt efficaci per questi modelli è essenziale per sfruttare al meglio le loro capacità e ottenere risultati desiderati in vari contesti di utilizzo. 
+            
     \subsection{Come avviene il processo di interpretazione dei prompt}
+        % TODO
+        
     \subsection{Il concetto di ``embedding''}
+        % TODO
+        
     \subsection{``Punti di attenzione'' e ``fine-tuning''}
+        % TODO
+    
     \subsection{I principali parametri di configurazione di un LLM}
+        Quando si utilizza un LLM come GPT o Claude, si può interagire direttamente con il modello attraverso un'API, che consente di configurare diversi parametri per ottimizzare le risposte del modello in base alle necessità specifiche. Questi parametri includono: 
+        \begin{itemize}
+            \item Top P, 
+            \item Lunghezza massima,  
+            \item Sequenze di stop, 
+            \item Penalità di frequenza 
+            \item Penalità di presenza.
+        \end{itemize}
+        
+        Ciascuno di questi parametri ha uno scopo specifico nella modulazione delle risposte del modello, permettendo di bilanciare tra creatività, specificità e concisione delle risposte generate.  
+        
+        Di seguito viene fornita una spiegazione di questi parametri e un esempio pratico del loro uso con GPT e con Claude. 
+        
         \subsubsection{Temperatura}
+            La temperatura è un parametro che influisce sul livello di casualità o determinismo nelle risposte generate dal modello. Questo parametro è essenziale per modulare come il modello sceglie il prossimo token (parola o parte di essa) durante il processo di generazione del testo.  Può assumere valori tipicamente compresi tra 0 e 1, anche se sono possibili valori più alti. 
+            \begin{itemize}
+                \item Temperatura bassa (<0.5): rende il modello più deterministico. Con una temperatura vicina a zero, il modello tende a scegliere ripetutamente i token più probabili, risultando in risposte molto prevedibili e meno varie: valore adeguato per compiti che richiedono precisione e affidabilità;
+                
+                \item Temperatura alta (>0.5): aumenta la casualità nelle scelte dei token. Ciò significa che il modello ha maggiori probabilità di selezionare token meno probabili, portando a risposte più creative, variabili e a volte inaspettate:  valore adeguato per compiti che richiedono creatività, come scrivere poesie, storie, o generare idee innovative. 
+            \end{itemize}
+
+            \textbf{Uso}: parametro utile per adattare il modello a compiti che richiedono più o meno originalità e varietà. 
+            
         \subsubsection{Top p (nucleus sampling)}
+            Il parametro Top P, conosciuto anche come \textit{nucleus sampling}, è importante per controllare il comportamento del generatore di testo; è un metodo di campionamento che seleziona il prossimo token da un sottoinsieme ridotto del vocabolario del modello.  
+
+            Il valore di \texttt{top\_p} rappresenta la probabilità cumulativa e determina la grandezza di questo sottoinsieme. In pratica, si configura il modello per considerare il più piccolo insieme di token il cui valore cumulativo delle probabilità supera il valore di \texttt{top\_p}. Per es., con \texttt{top\_p = 0.9}, si stanno includendo solo i token più probabili che, insieme, accumulano il 90\% della probabilità totale. In altre parole, per ogni scelta del prossimo token, il modello guarda al set di token che costituiscono il 90\% più probabile e seleziona da lì, escludendo token meno probabili che cumulativamente costituiscono il restante 10\%. Questo è fatto per assicurare che il testo generato sia ragionevolmente probabile (non troppo bizzarro o imprevedibile), ma allo stesso tempo permette una certa varietà e creatività nella generazione della risposta.
+
+            \textbf{Uso}: parametro utile per bilanciare la generazione tra risposte convenzionali e innovative, a seconda del contesto. 
+        
         \subsubsection{Lunghezza massima}
+            Il parametro lunghezza massima determina il numero massimo di token che il modello può generare come risposta.	Impostare questo parametro permette di prevenire risposte eccessivamente lunghe o divagazioni. 
+
+            \textbf{Uso}: parametro importante per mantenere le risposte concise e pertinenti, specialmente in applicazioni interattive o quando si desiderano risposte brevi. 
+            
         \subsubsection{Sequenze di stop}
+            Parametro che specifica i token o una sequenza di token che, se generati, causeranno l'interruzione della generazione del testo. Questo aiuta a controllare la struttura e la lunghezza della risposta. 
+
+            \textbf{Uso}: parametro utilizzato per definire un punto di terminazione chiaro nelle risposte, come la fine di un elenco o di un paragrafo. 
+            
         \subsubsection{Penalità di frequenza}
+            Il parametro penalità di frequenza, unitamente al parametro successivo penalità di presenza, aiuta a controllare la ripetizione (dei token) delle parole nel testo generato. Il parametro penalità di frequenza modifica la probabilità di selezione di un token in base alla frequenza con cui è già apparso nel testo corrente.  Il valore di questa penalità può variare da 0 a 2 e influisce su come il modello "penalizza" i token già usati: 
+            \begin{itemize}
+                \item 0: non viene applicata alcuna penalità. Il modello può ripetere parole o frasi senza alcun condizionamento. 
+            
+                \item Positivo: ogni volta che un token viene generato, la sua probabilità di essere scelto di nuovo viene ridotta. Per esempio, un valore di \texttt{frequency\_penalty = 0.5} significa che la probabilità di selezionare nuovamente un token già apparso viene diminuita in modo significativo, ma non del tutto, ogni volta che il token è usato. Questo aiuta a ridurre le ripetizioni senza eliminare completamente la possibilità che parole chiave rilevanti ricompaiano nel testo. 
+            
+                \item Alto (vicino a 2): rende molto improbabile la ripetizione di parole, promuovendo una diversità estrema nel testo generato che potrebbe, a volte, compromettere la sua coerenza e leggibilità. 
+            \end{itemize}
+            
+            La penalità di frequenza è particolarmente utile in applicazioni di generazione di testo dove la qualità e la leggibilità del contenuto sono cruciali, come nella scrittura creativa, nella redazione di articoli, nella creazione di contenuti per il marketing e nella generazione automatica di report. In questi contesti, evitare ripetizioni inutili e promuovere la ricchezza del linguaggio sono aspetti fondamentali per rendere il testo più accattivante e professionale. 
+            
         \subsubsection{Penalità di presenza}
+            Il parametro penalità di presenza è progettato per influenzare la varietà delle risposte generate dal modello modificando la probabilità di selezione dei token che sono già apparsi nel testo. Questo parametro è particolarmente utile per incoraggiare la generazione di contenuto nuovo e diversificato, riducendo la tendenza del modello a ripetere gli stessi concetti o frasi; aggiunge una penalità ai token ogni volta che compaiono nel testo generato, a prescindere dalla frequenza con cui sono apparsi.  
+
+            A differenza della penalità di frequenza, che penalizza i token in base alla frequenza delle loro apparizioni, la penalità di presenza si applica uniformemente ogni volta che un token ricompare.
+            \begin{itemize}
+                \item 0: non viene applicata alcuna penalità per la presenza di token, consentendo al modello di ripetere liberamente parole o frasi senza alcun deterrente.  
+            
+                \item Basso: impostare per esempio un valore di \texttt{presence\_penalty = 0.2} significa che la probabilità di selezionare di nuovo un token già utilizzato viene leggermente ridotta. Questo impedisce al modello di ripetere troppo spesso lo stesso concetto o frase, promuovendo l'introduzione di idee nuove nel testo.  
+            
+                \item Alto (vicino a 1 o superiore): una penalità di presenza alta scoraggia fortemente la ripetizione di qualsiasi token già usato, spingendo il modello a esplorare nuovi territori linguistici e concettuali, il che può essere utile per stimolare la creatività ma a rischio di perdere coerenza. 
+            \end{itemize}
+            
+            La penalità di presenza è utile in scenari dove è richiesta la generazione di contenuti freschi e originali ma dove è anche importante mantenere una narrazione o una discussione coesa e logica. Esempi includono il brainstorming di idee, la scrittura creativa, la generazione di contenuti didattici innovativi, o la conversazione interattiva in cui è desiderabile evitare la stagnazione tematica. 
+            
     \subsection{Esempio pratico di uso con GPT}
+        Supponiamo che un'azienda di voler utilizzare GPT-3 per avere de una spiegazione relativa al seguente problema: 
+
+        \begin{center}
+            \textit{``Spiega i benefici dell'energia solare per le abitazioni residenziali.''}
+        \end{center}
+
+        \begin{itemize}
+            \item   
+                \textbf{Temperatura}: Impostata a 0.7 implica che il modello è configurato per generare testo che è relativamente creativo e vario, ma ancora guidato in gran parte dalle probabilità linguistiche apprese durante l'addestramento. Con questo valore, il modello non è così casuale da perdere coerenza, ma è abbastanza aperto da introdurre elementi interessanti e meno prevedibili nel testo. Ecco alcune considerazioni.
+                \begin{itemize}
+                    \item Creatività moderata: con una temperatura di 0.7, il modello può esplorare opzioni di risposta leggermente più ampie senza diventare troppo divergente o irrilevante, il che è utile per compiti che richiedono un certo livello di inventiva, come la scrittura creativa o la pubblicità.   
+
+                    \item Coerenza mantenuta: nonostante la maggiore apertura alla casualità, una temperatura di 0.7 mantiene una forte aderenza al linguaggio e ai pattern appresi durante l'addestramento, assicurando che le risposte restino logiche e comprensibili.  
+                
+                    \item Adattabilità: Questo livello di temperatura consente al modello di adattarsi a vari contesti, rendendolo adatto per applicazioni che richiedono una risposta equilibrata tra nozione e novità, come nelle risposte di assistenti virtuali, generazione di contenuti educativi e supporto al cliente. 
+                \end{itemize}
+                
+                In conclusione, una \texttt{temperature = 0.7} è una scelta equilibrata per molti scenari di generazione di testo quando si desidera che il modello produca risposte che sono né troppo rigide né eccessivamente libere, equilibrando tra la generazione di testo coerente e l'introduzione di elementi nuovi e creativi.  
+
+        \item 
+            \textbf{Top P}: Impostata a 0.9 per permettere una buona varietà di espressioni senza divagare troppo. 
+
+            \begin{itemize}
+                \item Equilibrio tra casualità e coerenza: Con un \texttt{top\_p} di 0.9, si sta optando per un equilibrio tra generare testo che sia né troppo prevedibile né troppo casuale. È sufficientemente ristretto per mantenere la coerenza e la pertinenza del testo, ma abbastanza aperto per introdurre elementi creativi e variati. 
+        
+                \item Controllo della diversità del testo: Questo valore permette al modello di esplorare diverse opzioni linguistiche senza deviare troppo dai modelli di lingua comuni o sensati. Il testo risultante tende ad essere interessante ma ancora legato alla realtà del contesto dato.  
+                \item Miglioramento della qualità del testo: L'uso di un \texttt{top\_p} elevato può migliorare la qualità del testo in scenari dove è richiesta una certa creatività senza perdere l'aderenza al contesto e alla logica del discorso. 
+            \end{itemize}
+        
+            In sintesi, \texttt{top\_p = 0.9} è una scelta che spesso rappresenta un buon compromesso per molti casi d'uso, specialmente quelli che richiedono un bilanciamento tra novità e coerenza del contenuto generato, come nella scrittura creativa, nel marketing, e in altre applicazioni di narrazione assistita dall'IA. 
+        
+        \item
+            \textbf{Lunghezza Massima}: Limitata a 150 token per mantenere le descrizioni abbastanza concise ma comunque consentire al modello un po’ di spazio espressivo. 
+        
+        \item
+            \textbf{Sequenze di Stop}: Potrebbe essere ad esempio``\texttt{\#\#\#}'' o ``\texttt{</descrizione>}'' per segnalare chiaramente la fine di ciascuna descrizione. 
+        
+        \item
+            \textbf{Penalità di frequenza}: Si è detto che la penalità di frequenza controlla quanto un modello evita di ripetere le stesse parole di frequente; un valore più alto (es. 1,2) scoraggia maggiormente queste ripetizioni rispetto a un valore più basso (es. 0,5). È una sottile differenza di calibrazione. 
+            \begin{itemize}
+                \item \textbf{Riduzione delle ripetizioni}: Applicando una penalità di 0.5, il modello tende a evitare di ripetere le stesse parole frequentemente nel testo, il che è utile per mantenere il contenuto fresco e interessante, specialmente in testi lunghi o in contenuti come articoli di blog, racconti o report informativi. 
+                
+                \item \textbf{Maggiore variazione lessicale}: Questa impostazione incoraggia il modello a utilizzare sinonimi o frasi alternative, arricchendo il vocabolario del testo generato e migliorando la qualità complessiva del contenuto. 
+                
+                \item \textbf{Equilibrio tra coerenza e creatività}: Una penalità di 0.5 è bilanciata in modo tale da non sopprimere completamente la ripetizione di termini tecnicamente importanti o di fraseologia necessaria per mantenere la coerenza del testo. Permette al modello di essere creativo ma anche coeso, evitando la generazione di testi che possono sembrare frammentati o eccessivamente dispersivi. 
+            \end{itemize}
+        
+            In conclusione, una \texttt{frequency\_penalty = 0.5} è una scelta efficace per chi cerca di bilanciare l'esigenza di varietà e freschezza nel testo con la necessità di mantenere una certa coerenza e rilevanza del contenuto. 
+
+        \item
+            \textbf{Penalità di presenza}: Si è detto che la penalità di presenza invece riguarda invece la ripetizione di intere sequenze di token/frasi già viste in precedenza. Un valore negativo (es. -0,5) riduce la probabilità che il modello ripeta esattamente le stesse frasi, mentre un valore leggermente positivo (es. 0,1) minimizza in modo più lieve questa ripetizione di frasi meno frequenti. 
+            \begin{itemize}
+                \item Incentiva la diversità: Una \texttt{presence\_penalty} moderata, come 0.2, aiuta a mantenere il testo vario senza deviare troppo dai temi o dagli argomenti trattati. Promuove la varietà ma mantiene un equilibrio, evitando che il testo diventi troppo dispersivo.   
+                    
+                \item Riduce eccessive ripetizioni: Questo livello di penalità aiuta a prevenire la ripetizione eccessiva di termini o frasi, rendendo il testo generato più piacevole e professionale, particolarmente importante in contesti come la scrittura creativa, accademica o professionale.   
+                    
+                \item Bilanciamento tra novità e coerenza: Con un \texttt{presence\_penalty = 0.2}, il modello è incoraggiato a introdurre nuovi contenuti mantenendo una connessione con il materiale già discusso, il che è cruciale per mantenere la coerenza del discorso senza cadere in ripetizioni monotone. 
+            \end{itemize}
+        
+            In conclusione, una \texttt{presence\_penalty = 0.2} è efficace per stimolare la diversità nel testo generato senza compromettere eccessivamente la coerenza o la pertinenza, rendendola una scelta equilibrata per molti contesti di generazione di testo automatico. 
+        \end{itemize}
+        
+        Questi parametri aiuterebbero a sfruttare le capacità linguistiche creative di GPT per produrre descrizioni di prodotto accattivanti, pur mantenendole concise, variate e conformi ai valori di allineamento mirato dell'azienda. 
+        
     \subsection{Esempio di interazione con le API GPT-3 in Python}
+        % DA RICOPIARE
+        
     \subsection{Personalizzare attraverso piattaforme web}
     \subsection{Personalizzare Chat-GPT}
     \subsection{Principi e tecniche di prompt engineering}
@@ -59,4 +460,7 @@
         \subsubsection{Esempio di prompt esplicito}
     \subsection{Prompt espliciti vs. promt impliciti: esempi}
     \subsection{Il fenomeno delle ``allucinazioni''}
+        % TODO
+        
     \subsection{Strumenti di IA Generativa attraverso API}
+        % TODO
