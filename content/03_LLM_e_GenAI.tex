@@ -269,7 +269,7 @@
                 \item
                     \textbf{Addestramento}: Gli LLM sono addestrati su grandi quantità di testo; Questo può includere libri, articoli, siti web, e altro ancora. Durante l'addestramento, il modello analizza i testi per capire come le parole si combinano per formare frasi, come le frasi costruiscono paragrafi, e come i paragrafi possono esprimere idee complesse. Il modello impara le regole grammaticali, i significati delle parole, e le relazioni tra di esse. Questo processo richiede enormi quantità di dati e capacità di calcolo. Alcune note meritano di essere aggiunte relativamente ad particolare tipo di addestramento denominato da Anthropic con il temine di ``costituzionale''.
             
-                    L'addestramento costituzionale (o constitutional training) è un approccio utilizzato nell'addestramento di alcuni modelli di IA, per cercare di migliorarne l'affidabilità, la sicurezza e l'allineamento con determinati valori e principi etici. In sostanza, durante la fase di addestramento vengono aggiunti al dataset esempi ed istruzioni esplicite che codificano determinate regole di comportamento, valori deontologici, conoscenze fattuali affidabili e restrizioni su ciò che il modello dovrebbe o non dovrebbe fare nelle sue risposte e output. Lo scopo è quello di ``costituzionalizzare'' il modello, ovvero renderlo più stabile, coerente e ancorato a principi di base concordati, riducendo il rischio di derive indesiderate o pericolose quando viene utilizzato. È un tentativo di instillare una sorta di "costituzione" comportamentale nel modello fin dalla sua formazione. Questo approccio non elimina del tutto il rischio di allucinazioni o di altre problematiche nei modelli di IA (che discuteremo nel dettaglio nel seguito del documento), ma mira a limitarne la portata indirizzando il modello verso risposte più sicure, etiche e costituzionalmente allineate con valori stabiliti.
+                    L'addestramento costituzionale (o constitutional training) è un approccio utilizzato nell'addestramento di alcuni modelli di IA, per cercare di migliorarne l'affidabilità, la sicurezza e l'allineamento con determinati valori e principi etici. In sostanza, durante la fase di addestramento vengono aggiunti al dataset esempi ed istruzioni esplicite che codificano determinate regole di comportamento, valori deontologici, conoscenze fattuali affidabili e restrizioni su ciò che il modello dovrebbe o non dovrebbe fare nelle sue risposte e output. Lo scopo è quello di ``costituzionalizzare'' il modello, ovvero renderlo più stabile, coerente e ancorato a principi di base concordati, riducendo il rischio di derive indesiderate o pericolose quando viene utilizzato. È un tentativo di instillare una sorta di ``costituzione'' comportamentale nel modello fin dalla sua formazione. Questo approccio non elimina del tutto il rischio di allucinazioni o di altre problematiche nei modelli di IA (che discuteremo nel dettaglio nel seguito del documento), ma mira a limitarne la portata indirizzando il modello verso risposte più sicure, etiche e costituzionalmente allineate con valori stabiliti.
 
                 \item
                     \textbf{Apprendimento}: Mentre analizza il testo, il modello costruisce una sorta di ``memoria interna'' o una rappresentazione del linguaggio. Utilizza strutture matematiche chiamate vettori per rappresentare concetti e parole. Più il modello incontra una parola o una struttura in vari contesti, meglio riesce a comprendere il suo uso e significato. Il concetto di vettori di parole (``word embedding'') è una parte fondamentale del meccanismo di apprendimento e rappresentazione del linguaggio. Questi vettori sono rappresentazioni matematiche di alta dimensione che cercano di catturare il significato delle parole, i loro usi e le loro relazioni con altre parole. Ogni vettore è essenzialmente un array di numeri che il modello di linguaggio impara durante il suo addestramento. Per fornire un esempio concreto, ecco come potrebbe essere rappresentato il vettore per la frase ``Cappuccetto Rosso'' dopo che il modello ha letto la fiaba.
@@ -278,7 +278,7 @@
 
                     \texttt{["Cappuccetto Rosso"] = [0.85, -0.32, 0.91, ..., 0.45]}
 
-                    In questa rappresentazione semplificata, ogni numero nel vettore rappresenta un aspetto del significato associato alla frase "Cappuccetto Rosso" nel contesto della fiaba. Questi potrebbero includere:
+                    In questa rappresentazione semplificata, ogni numero nel vettore rappresenta un aspetto del significato associato alla frase ``Cappuccetto Rosso'' nel contesto della fiaba. Questi potrebbero includere:
                     \begin{itemize}
                         \item \texttt{0.85}: forte correlazione con temi di innocenza o vulnerabilità.
                         \item \texttt{-0.32}: una leggera correlazione negativa con concetti di sicurezza o protezione.
@@ -351,7 +351,7 @@
             \textbf{Uso}: parametro utilizzato per definire un punto di terminazione chiaro nelle risposte, come la fine di un elenco o di un paragrafo.
             
         \subsubsection{Penalità di frequenza}
-            Il parametro penalità di frequenza, unitamente al parametro successivo penalità di presenza, aiuta a controllare la ripetizione (dei token) delle parole nel testo generato. Il parametro penalità di frequenza modifica la probabilità di selezione di un token in base alla frequenza con cui è già apparso nel testo corrente. Il valore di questa penalità può variare da 0 a 2 e influisce su come il modello "penalizza" i token già usati:
+            Il parametro penalità di frequenza, unitamente al parametro successivo penalità di presenza, aiuta a controllare la ripetizione (dei token) delle parole nel testo generato. Il parametro penalità di frequenza modifica la probabilità di selezione di un token in base alla frequenza con cui è già apparso nel testo corrente. Il valore di questa penalità può variare da 0 a 2 e influisce su come il modello ``penalizza'' i token già usati:
             \begin{itemize}
                 \item 0: non viene applicata alcuna penalità. Il modello può ripetere parole o frasi senza alcun condizionamento.
             
@@ -377,7 +377,7 @@
             La penalità di presenza è utile in scenari dove è richiesta la generazione di contenuti freschi e originali ma dove è anche importante mantenere una narrazione o una discussione coesa e logica. Esempi includono il brainstorming di idee, la scrittura creativa, la generazione di contenuti didattici innovativi, o la conversazione interattiva in cui è desiderabile evitare la stagnazione tematica.
             
     \subsection{Esempio pratico di uso con GPT}
-        Supponiamo che un'azienda di voler utilizzare GPT-3 per avere de una spiegazione relativa al seguente problema:
+        Supponiamo che un'azienda di voler utilizzare GPT-3 per avere una spiegazione relativa al seguente problema:
 
         \begin{center}
             \textit{``Spiega i benefici dell'energia solare per le abitazioni residenziali.''}
@@ -415,7 +415,7 @@
             \textbf{Sequenze di Stop}: Potrebbe essere ad esempio``\texttt{\#\#\#}'' o ``\texttt{</descrizione>}'' per segnalare chiaramente la fine di ciascuna descrizione.
         
         \item
-            \textbf{Penalità di frequenza}: Si è detto che la penalità di frequenza controlla quanto un modello evita di ripetere le stesse parole di frequente; un valore più alto (es. 1,2) scoraggia maggiormente queste ripetizioni rispetto a un valore più basso (es. 0,5). È una sottile differenza di calibrazione.
+            \textbf{Penalità di frequenza}: Si è detto che la penalità di frequenza controlla quanto un modello evita di ripetere le stesse parole di frequente; un valore più alto (es. 1.2) scoraggia maggiormente queste ripetizioni rispetto a un valore più basso (es. 0.5). È una sottile differenza di calibrazione.
             \begin{itemize}
                 \item \textbf{Riduzione delle ripetizioni}: Applicando una penalità di 0.5, il modello tende a evitare di ripetere le stesse parole frequentemente nel testo, il che è utile per mantenere il contenuto fresco e interessante, specialmente in testi lunghi o in contenuti come articoli di blog, racconti o report informativi.
                 
@@ -427,7 +427,7 @@
             In conclusione, una \texttt{frequency\_penalty = 0.5} è una scelta efficace per chi cerca di bilanciare l'esigenza di varietà e freschezza nel testo con la necessità di mantenere una certa coerenza e rilevanza del contenuto.
 
         \item
-            \textbf{Penalità di presenza}: Si è detto che la penalità di presenza invece riguarda invece la ripetizione di intere sequenze di token/frasi già viste in precedenza. Un valore negativo (es. -0,5) riduce la probabilità che il modello ripeta esattamente le stesse frasi, mentre un valore leggermente positivo (es. 0,1) minimizza in modo più lieve questa ripetizione di frasi meno frequenti.
+            \textbf{Penalità di presenza}: Si è detto che la penalità di presenza invece riguarda invece la ripetizione di intere sequenze di token/frasi già viste in precedenza. Un valore negativo (es. -0.5) riduce la probabilità che il modello ripeta esattamente le stesse frasi, mentre un valore leggermente positivo (es. 0.1) minimizza in modo più lieve questa ripetizione di frasi meno frequenti.
             \begin{itemize}
                 \item Incentiva la diversità: Una \texttt{presence\_penalty} moderata, come 0.2, aiuta a mantenere il testo vario senza deviare troppo dai temi o dagli argomenti trattati. Promuove la varietà ma mantiene un equilibrio, evitando che il testo diventi troppo dispersivo.
                     
@@ -442,27 +442,493 @@
         Questi parametri aiuterebbero a sfruttare le capacità linguistiche creative di GPT per produrre descrizioni di prodotto accattivanti, pur mantenendole concise, variate e conformi ai valori di allineamento mirato dell'azienda.
         
     \subsection{Esempio di interazione con le API GPT-3 in Python}
-        % DA RICOPIARE
+        Consideriamo ora in questo paragrafo un esempio come utilizzare questi parametri con le API di GPT-3 attraverso il linguaggio Python, che dovranno essere inclusi nella richiesta HTTP al servizio API di OpenAI.
+
+        \begin{Verbatim}[frame=single]
+import openai                  #importa la libreria OpenAI per
+                               #interagire con l’API di GPT-3
+
+response = openai.Completion.create(
+    engine="text-davinci-003", #specifica il modello da utilizzare: "text-davinci-003"
+                               #è uno dei modelli più avanzati disponibili
+    prompt="Spiega i benefici dell'energia solare per le abitazioni residenziali.",
+                               #fornisce il testo iniziale che guida il modello su
+                               #cosa deve essere generato
+    temperature=0.7,#0.7 promuove creatività senza diventare troppo imprevedibile
+    max_tokens=150,	#numero massimo di token che il modello può generare come risposta
+    top_p=0.9,      #si stanno includendo solo i token più probabili che, insieme,
+       #accumulano il 90% della probabilità totale
+    stop=["[The End]"],    	#sequenze di token che, se generate, fermano la
+                           	#produzione di ulteriori token
+    frequency_penalty=0.5,	#penalizza i token che appaiono più frequentemente,
+                           	#riducendo la ripetitività
+    presence_penalty=0.1 )	#penalizza i token ogni volta che compaiono,
+                          	#incentivando la varietà
+print(response.choices[0].text.strip()) #prende risposta generata dal modello
+                                        #(response.choices[0].text), rimuove gli spazi
+                                        #extra all'inizio e alla fine della stringa
+                                        #(strip()) e la stampa.
+        \end{Verbatim}
+
+        Supponiamo ora di voler usare il codice per fare generare una breve storia; potrebbe essere:
+        \\
+        \textit{Dopo decenni di urbanizzazione sfrenata, la natura ha iniziato a reclamare il pianeta Terra. Le città, una volta simboli di progresso umano, ora giacevano abbandonate, avvolte da una fitta vegetazione. Al centro di quello che una volta era New York, un piccolo gruppo di sopravvissuti aveva trovato rifugio in un antico grattacielo, ora coperto di edera e radici. Avevano imparato a convivere con la natura, coltivando giardini verticali e raccogliendo l'acqua piovana per sopravvivere. Il loro leader, Mara, una volta ingegnere ambientale, guidava il gruppo con saggezza. ``La natura non è il nostro nemico,'' spiegava spesso, ``ma la nostra più grande alleata se impariamo a rispettarla.'' Con il passare degli anni, Mara e il suo gruppo stabilirono un equilibrio delicato con l'ambiente circostante, segnando l'inizio di una nuova era in cui umani e natura coesistevano in armonia. E così, nel cuore di una città riconquistata dal verde, germogliava la speranza per un futuro migliore. [The End]}
+    
+        Questo è un esempio del tipo di creatività e coerenza che ci si può aspettare con i parametri utilizzati. Ogni utilizzo del modello potrebbe produrre una storia leggermente diversa, grazie alla natura probabilistica del modello e configurazione dei parametri scelti.
         
     \subsection{Personalizzare attraverso piattaforme web}
+        Le opzioni per personalizzare i parametri di un LLM come ChatGPT o Claude, usato attraverso piattaforme standard come i siti web di OpenAI o di Anthropic, sono generalmente limitate o non disponibili. La maggior parte delle personalizzazioni avanzate, come la temperatura, il Top P, la lunghezza massima e le penalità, non sono direttamente accessibili agli utenti finali in questa modalità di interazione.
+
+        Nella versione di ChatGPT-3.5, si può però scegliere tra gli stili di conversazione
+        \begin{itemize}
+            \item Creativa,
+            \item Bilanciata,
+            \item Precisa,
+        \end{itemize}
+        ma i parametri specifici come temperatura, Top P e lunghezza massima non sono pubblicamente documentati da OpenAI per quanto riguarda i valori esatti utilizzati per ciascun stile.
+
+        Questi stili di conversazione sono progettati per adattarsi a diverse esigenze e preferenze degli utenti senza che essi debbano gestire direttamente i parametri tecnici. OpenAI ha ottimizzato questi stili per garantire che, a seconda della scelta, il modello risponda in modo appropriato al contesto desiderato.
+
+        È possibile comunque ipotizzare come questi stili potrebbero influenzare i parametri sulla base delle caratteristiche tipiche associate a ciascun stile: OpenAI ha ottimizzato questi stili.
+
+        \begin{itemize}
+            \item \textbf{Conversazione creativa}
+            \begin{itemize}
+                \item Temperatura: Probabilmente impostata su un valore più alto. La temperatura elevata aumenta la casualità delle risposte, permettendo al modello di generare risposte più uniche e meno prevedibili. Questo è ideale per compiti che richiedono creatività, come scrivere poesie, storie, o generare idee innovative.
+                \item Top P: Probabilmente impostato su un valore relativamente alto per consentire una maggiore diversità nelle risposte e incoraggiare il modello a esplorare una varietà di possibili completamenti.
+                \item Lunghezza massima: Potrebbe essere più flessibile per permettere sviluppi più estesi e creativi nelle risposte.
+            \end{itemize}
+            
+            \item \textbf{Conversazione bilanciata}
+            \begin{itemize}
+                \item Temperatura: Probabilmente impostata su un valore medio. Questo equilibrio nella temperatura aiuta il modello a produrre risposte che sono né troppo prevedibili né troppo casuali, rendendolo adatto per la maggior parte delle applicazioni generali.
+                \item Top P: Moderato, per mantenere una buona varietà nelle risposte ma senza deviare troppo in risposte troppo azzardate o irrilevanti.
+                \item Lunghezza massima: Potrebbe essere configurata per produrre risposte di una lunghezza ragionevole, né troppo concise né troppo prolisse.
+            \end{itemize}
+            
+            \item \textbf{Conversazione precisa}
+            \begin{itemize}
+                \item Temperatura: Impostata su un valore più basso. Una bassa temperatura rende le risposte del modello più deterministiche e concentrate, tendendo a scegliere le opzioni di completamento più probabili basate sui dati di addestramento.
+                \item Top P: Più basso, per limitare la varietà delle risposte e focalizzarsi su quelle che sono più probabilmente accurate e informative, particolarmente utile per risposte basate su fatti o dati.
+                \item Lunghezza massima: Potrebbe essere controllata per evitare divagazioni e mantenere le risposte concise e al punto.
+            \end{itemize}
+        \end{itemize}
+        
     \subsection{Personalizzare Chat-GPT}
+        Come utente finale di un LLM come ad esempio ChatGPT, con cui interagisco tramite il sito web di OpenAI, non si ha generalmente l'accesso diretto per modificare i parametri tecnici che influenzano la precisione o la creatività delle risposte. Tuttavia, si può indirettamente guidare il modello verso risposte più precise o creative attraverso tecniche di prompt engineering, cioè, formulare le domande nel modo più chiaro e dettagliato possibile per guidare le risposte del modello nella direzione desiderata.
+
+        Vediamo brevemente alcune tecniche di formulazione del prompt, che riprendiamo e discutiamo nel dettaglio nel seguito di questo documento. Utilizzando questi approcci, si può spesso ottenere risposte che si avvicinano ai nostri obiettivi di precisione o creatività.
+
+        \begin{itemize}
+            \item \textbf{Per incoraggiare risposte più creative}:
+            \begin{itemize}
+                \item Chiedere di pensare fuori dagli schemi: Puoi incoraggiare il modello a essere più creativo con prompt che invitano a esplorazioni imaginarie. Ad esempio, \textit{``Immagina un mondo dove gli alberi possono parlare. Come sarebbe una giornata tipica?''}
+
+                \item Usare prompt aperti: I prompt aperti permettono al modello di esplorare una gamma più ampia di possibilità. Ad esempio, \textit{``Cosa succederebbe se la gravità sulla Terra fosse improvvisamente dimezzata?''}.
+                
+                \item Chiedere di creare storie o scenari: Chiedere a ChatGPT di inventare una storia o descrivere uno scenario immaginario può portare a risposte molto creative. Ad esempio, ``\textit{Racconta una storia su un viaggio nello spazio che scopre un nuovo pianeta abitabile.''}
+            \end{itemize}
+
+            \item \textbf{Per incoraggiare risposte più precise:}
+            \begin{itemize}
+                \item Essere specifici: Specifica chiaramente ciò che desideri sapere. Ad esempio, invece di chiedere \textit{``Raccontami qualcosa su Marte''}, potresti chiedere \textit{``Quali sono le ultime scoperte scientifiche fatte dal rover Perseverance su Marte?'}'
+
+                \item Usare domande chiuse (quando possibile): Le domande chiuse tendono a limitare lo spazio di risposta del modello, rendendole più dirette e concentrate. Ad esempio, \textit{``Marte ha atmosfera?''} è più diretto rispetto a \textit{``Cosa puoi dirmi dell'atmosfera di Marte?''}
+                
+                \item Chiedere definizioni o spiegazioni dettagliate: Se cerchi informazioni precise, chiedere definizioni o spiegazioni dettagliate può aiutare. Ad esempio, \textit{``Puoi spiegare come funziona la fotosintesi nei dettagli?'}'
+            \end{itemize}
+        \end{itemize}
+
+        A quanto detto fino ad ora, possiamo applicare delle \textbf{strategie generali}:
+        \begin{itemize}
+            \item Fornire contesto: Aggiungere dettagli o contesto al tuo prompt può aiutare il modello a capire meglio il livello di creatività o precisione che stai cercando.
+
+            \item Iterare sui prompt: Se la prima risposta non soddisfa le tue aspettative, puoi riformulare il prompt o chiedere chiarimenti per guidare il modello verso la direzione desiderata.
+        \end{itemize}
+
     \subsection{Principi e tecniche di prompt engineering}
+        Il prompt engineering gioca un ruolo cruciale nel guidare i modelli di linguaggio verso output desiderati. I prompt funzionano come istruzioni testuali che forniscono al modello il contesto per interpretare la richiesta e generare risposte adeguate. La precisione e chiarezza dei prompt sono fondamentali per evitare ambiguità e indirizzare il modello verso informazioni rilevanti. Tecniche come definire il contesto, specificare vincoli, usare parole chiave strategiche e impostare il tono aiutano a ottimizzare i prompt. Il prompting costituzionale incorpora principi etici espliciti da seguire. Approcci come lo one-shot learning, il few-shot learning e il chain of thought prompting migliorano le capacità di ragionamento del modello. Infine, la lingua utilizzata nei prompt influenza aspetti come la complessità linguistica, il contesto culturale e potenziali bias.
+
         \subsubsection{Come funzionano i prompt}
+            Il prompt engineering gioca un ruolo cruciale nella modulazione e guida delle risposte dei modelli di linguaggio avanzati. Questo processo consiste nel formulare input specifici (prompt) che indirizzano il modello verso la produzione di output desiderato.
+
+            I \textbf{prompt} funzionano come istruzioni testuali che un utente inserisce nel modello di linguaggio che utilizza le informazioni fornite (contenute nel prompt) per interpretare cosa l'utente sta cercando e per generare una risposta adeguata (in linea con le aspettative dell'utente).
+            
+            Vediamo quindi come funzionano i prompt, riprendendo anche quanto già introdotto discutendo dei ``Large Language Models'':
+
+            \begin{enumerate}
+                \item \textbf{Interpretazione del prompt}: Quando un prompt viene inserito in un modello di linguaggio, il primo passo del modello è analizzare e interpretare questo input. I modelli di linguaggio avanzati, come GPT, BERT, Claude, ecc. utilizzano tecniche NLP per decompore il testo del prompt in componenti comprensibili (token). Questo processo di tokenizzazione consente al modello di comprendere le parole e le frasi nel loro contesto.
+                
+                \item \textbf{Rappresentazione interna}: Dopo la tokenizzazione, il modello trasforma le parole in vettori numerici, che sono rappresentazioni matematiche in uno spazio vettoriale. Questi vettori catturano non solo il significato delle parole, ma anche le loro relazioni con altre parole nel contesto del prompt. Questa trasformazione in embedding permette al modello di manipolare linguisticamente le informazioni in maniera efficiente.
+                
+                \item \textbf{Generazione del testo}: Utilizzando gli ``embedding'' e la propria architettura interna (come i layer di attenzione nei modelli Transformer), il modello predice quale dovrebbe essere la risposta più probabile e rilevante basata sul prompt. Questo è ottenuto attraverso un processo di selezione delle parole successive fino al completamento di una frase o paragrafo che il modello ritiene sia la conclusione logica del prompt.
+                
+                \item \textbf{Risposta al prompt}: Infine, il testo generato viene presentato all'utente come risposta al prompt iniziale. Questa risposta è il risultato delle previsioni del modello su cosa dovrebbe seguire logicamente dall'input fornito dall'utente.
+            \end{enumerate}
+                
+            Supponiamo ora che l'utente inserisca il prompt: \textit{``Descrivi il processo di fotosintesi.''}, e discutiamo con maggiore dettaglio come il modello procederebbe secondo lo schema appena definito.
+            
         \subsubsection{Interpretazione dei prompt}
+            Il primo passo è tokenizzare il prompt in componenti comprensibili. Ad esempio, il nostro prompt potrebbe essere tokenizzato come:
+
+            \texttt{["Descrivi", "il", "processo", "di", "fotos", "\#\#intesi"]}.
+            
+            Si potrebbe dire che in questa fase ``il modello comprende che si sta chiedendo una spiegazione scientifica'', ma occorre chiarire meglio questo aspetto che riguarda il modo in cui i modelli di linguaggio comprendono il contesto dei prompt in modo implicito, piuttosto che attraverso una comprensione simbolica esplicita.
+            
+            Durante la fase di interpretazione del prompt \textit{``Descrivi il processo di fotosintesi''}, il modello non riconosce in modo dichiarativo che gli viene chiesta una spiegazione scientifica. Non c'è una classificazione o rappresentazione interna dedicata al concetto di \textit{``spiegazione scientifica''}. Tuttavia, il modello è in grado di inferire il tipo di risposta richiesta da diversi segnali contestuali presenti nel prompt:
+            \begin{itemize}
+                \item \textbf{Vocabolario specialistico}: Parole come ``processo'' e ``fotosintesi'' fanno parte del linguaggio scientifico e forniscono indicazioni che la risposta dovrebbe essere di tipo tecnico/esplicativo.
+            
+                \item \textbf{Pattern linguistici}: Nell'enorme quantità di dati su cui è stato addestrato, il modello ha incontrato molte istanze di domande come ``Descrivi il processo di X'' seguite da spiegazioni dettagliate. Questo pattern associa implicitamente tali frasi a risposte esplicative.
+            
+                \item \textbf{Conoscenza pregressa}: Sebbene non ``comprenda'' il concetto ``fotosintesi'' a livello simbolico, il modello ha sviluppato una conoscenza distribuita sul tema durante la fase di training, associandolo statisticamente a nozioni sui processi biologici e chimici delle piante.
+            
+                \item \textbf{Ragionamento contestuale}: Man mano che inizia a generare una risposta del tipo spiegazione scientifica, questa direzione diventa sempre più ``raccomandata'' dal modello sulla base della coerenza con il prompt e il contesto generato finora.
+            \end{itemize}
+            
+            In sostanza, pur senza una rappresentazione dichiarativa di ``spiegazione scientifica'', numerosi segnali contestuali impliciti guidano il comportamento del modello in tale direzione, grazie alla enorme quantità di conoscenza incorporata attraverso il training su vasti dati di testo. È un'abilità di ragionamento implicito ed emergente, piuttosto che un processo di comprensione simbolica esplicita.
+            
         \subsubsection{Embedding}
+            Un embedding, nel contesto dell'interpretazione di un prompt, è una rappresentazione vettoriale (una sequenza di numeri) dei tag del prompt in uno spazio ad alta dimensione. Il processo di creazione di un embedding avviene tipicamente attraverso l'utilizzo di modelli di embedding pre-addestrati, come word2vec, GloVe o BERT. Questi modelli sono stati addestrati su enormi quantità di testo per imparare a mappare le parole e le frasi in rappresentazioni vettoriali in modo tale che parole che appaiono frequentemente in contesti simili o frasi simili siano mappate in vettori vicini nello spazio vettoriale. Tali modelli hanno già mappato milioni di parole in vettori di numeri (di solito da 100 a 300 dimensioni).
+
+            Questa rappresentazione vettoriale cattura le relazioni semantiche e sintattiche tra le parole nel testo, principalmente attraverso un approccio statistico basato sui dati utilizzati durante l’addestramento, permettendo ai modelli NLP di comprendere meglio il significato del prompt.
+            
+            Ad esempio, se le parole ``fotosintesi'' e ``clorofilla'' appaiono spesso vicine nello stesso contesto in molti testi, il modello impara che queste parole sono semanticamente correlate e assegnerà loro embedding vettoriali simili e vicini nello spazio vettoriale. Inoltre, i modelli possono anche catturare relazioni sintattiche simili esaminando schemi grammaticali ricorrenti. Ad esempio, parole che svolgono ruoli sintattici simili in molte frasi tenderanno ad avere embedding simili.
+            
+            Questo apprendimento delle relazioni semantiche e sintattiche, come già detto, è però puramente statistico e basato sui dati. Non c'è una comprensione ``profonda'' del significato delle parole, ma semplicemente un'associazione statistica dei contesti in cui appaiono parole simili. Più dati di addestramento vengono forniti al modello, migliori saranno le relazioni catturate negli embedding risultanti. È un processo di apprendimento non supervisionato che sfrutta le enormi quantità di dati di testo disponibili.
+            
         \subsubsection{Apprendimento non supervisionato e supervisionato}
+            \begin{itemize}
+                \item
+                    Apprendimento non supervisionato: tecnica di machine learning in cui l'algoritmo cerca di individuare autonomamente pattern e relazioni nei dati in input, senza essere fornito di esempi o etichette di addestramento precostituiti.
+
+                    Esempio: Supponiamo di avere un dataset di clienti di un negozio con informazioni come età, reddito, stato civile, ecc. Un algoritmo di clustering non supervisionato potrebbe analizzare questi dati e raggruppare automaticamente i clienti in cluster omogenei in base alle loro caratteristiche simili, senza che gli fossero forniti in precedenza etichette o gruppi predefiniti. Questo permetterebbe di individuare segmenti di clientela con profili e preferenze simili per strategie di marketing mirate. L'algoritmo impara a riconoscere pattern e raggruppamenti nei dati in modo autonomo, senza alcuna supervisione o etichette fornite.
+
+                \item
+                    Apprendimento supervisionato: tecnica di machine learning in cui l'algoritmo viene addestrato su un dataset di esempi etichettati, in modo da imparare a mappare gli input alle corrette output desiderate.
+            
+                    Esempio: Supponiamo di avere un dataset di immagini di cani e gatti, dove ogni immagine è etichettata con ``cane'' o ``gatto''. Un algoritmo di apprendimento supervisionato, come una rete neurale, può essere addestrato su questo dataset etichettato. Durante l'addestramento, l'algoritmo impara a riconoscere le caratteristiche distintive dei cani e dei gatti dalle immagini di esempio e dalle relative etichette fornite.
+                    
+                    Una volta addestrato, quando gli viene mostrata una nuova immagine, l'algoritmo sarà in grado di classificarla correttamente come ``cane'' o ``gatto'', avendo imparato a riconoscere i pattern rilevanti dai dati di addestramento etichettati in precedenza. In questo caso, la ``supervisione'' viene data dalle etichette ``cane'' e ``gatto'' associate alle immagini di addestramento, che guidano l'algoritmo ad apprendere il mapping corretto tra input (immagini) e output (etichette).
+            \end{itemize}
+
+            In sostanza, gli embedding riassumono le relazioni statistiche tra parole osservate in vasti corpora di testo in modo denso e compresso, consentendo ai modelli di elaborazione del linguaggio naturale di sfruttare queste ricche informazioni contestuali.
+            
+            Una volta che un prompt è stato convertito in un embedding vettoriale, questo può essere utilizzato come input per altri modelli di apprendimento automatico o di NLP.
+            
+            Ad esempio, nel caso di un modello di generazione di testo come GPT, l'embedding del prompt viene fornito al modello per aiutarlo a comprendere il contesto e il significato del prompt, in modo da generare un output di testo coerente e rilevante.
+            
     \subsection{Rappresentazione interna}
-    \subsection{Rappresentazione del testo}
+        Dopo la fase di interpretazione passiamo alla fase successiva in cui andiamo a creare una rappresentazione interna del token e che potremmo definire anche come analisi del contesto. Durante tale fase, ogni token viene trasformato in un embedding, cioè un vettore numerico che cattura il suo significato e le relazioni con gli altri token nel contesto. Dopo aver tokenizzato il prompt, la parola ``fotosintesi'' è stata suddivisa in due token: ``fotos'' e ``\#\#intesi''. Supponiamo di usare un modello di embedding come Word2Vec pre-addestrato; l token potrebbero essere mappati come segue (questi sono solo esempi di vettori casuali per semplificare):
+        \begin{itemize}
+            \item ``fotos'' potrebbe essere mappato in un vettore simile a: \texttt{[-0.23, 0.15, -0.08, 0.32, ..., 0.11]}
+            \item ``\#\#intesi'' potrebbe essere mappato in un vettore simile a: \texttt{[0.18, -0.21, 0.04, -0.15, ..., -0.09]}
+        \end{itemize}
+        
+        Il vettore embedding finale per la parola ``fotosintesi'' viene tipicamente ottenuto combinando in qualche modo i vettori dei suoi token costituenti ``fotos'' e ``\#\#intesi''; Un approccio comune è fare la media dei vettori dei token. Quindi l'embedding finale per:
+        \begin{itemize}
+            \item ``fotosintesi'' potrebbe essere: \texttt{[-0.025, -0.03, -0.02, 0.085, ..., 0.01]}
+        \end{itemize}
+        
+        Tale vettore rappresenta la ``codifica'' semantica della parola ``fotosintesi'' in uno spazio vettoriale denso. Parole simili, come ``clorofilla'' o ``processo biologico'', avranno embedding vicini nello spazio vettoriale. Questo embedding cattura il significato della parola e può essere utilizzato da modelli NLP per comprendere meglio il prompt originale.
+        
+        Facciamo un ulteriore esempio: “valutare se recensioni di ristoranti (ogni recensione è un testo) è positiva o negativa, in modo da poterli consigliare o meno”.
+        
+        A tale scopo, possiamo convertire ogni recensione in un embedding che catturi il “significato” e il sentimento complessivo della recensione. Ad esempio, recensioni come:
+        \begin{itemize}
+            \item ``Il servizio era lento e il cibo era insipido'' potrebbe essere convertita in \texttt{[0.2, -0.7, -0.1, ...]},
+            \item ``Cibo delizioso e personale cordiale'' potrebbe essere convertita in	\texttt{[0.8, 0.6, 0.3, ...]}.
+        \end{itemize}
+        
+        Facciamo notare che nel caso di recensioni positive, come la seconda recensione, notiamo embedding con valori numerici più alti, mentre quelle negative hanno valori più bassi. Questo perché le parole positive come ``delizioso'' e ``cordiale'' sono mappate a vettori con valori più alti. Ora, con questi embedding numerici, un modello di apprendimento automatico può facilmente imparare a distinguere le recensioni positive da quelle negative, semplicemente guardando ai valori nell'embedding.
+        
+        Quindi, in poche parole, attraverso questo processo di embedding converte testo in numeri, creando una rappresentazione interna dei token in modo che un computer possa facilmente elaborarli e capirne il significato complessivo.
+
+    \subsection{Generazione del testo}
+        Utilizzando gli embedding del prompt come input, il modello utilizza la sua architettura a Transformer per generare un embedding per il token successivo più probabile da aggiungere al testo da generare. Questo embedding è poi mappato alla parola corrispondente dal vocabolario. Ad esempio, potrebbe prevedere che dopo ``Descrivi il processo di fotosintesi'', la parola successiva più probabile è ``La''. Quindi genera l'embedding per ``La'' e lo aggiunge all'output parziale. Questo processo si ripete, con il modello che preleva il contesto del prompt e dell'output parziale generato per prevedere i token successivi, fino a completare una descrizione coerente del processo di fotosintesi.
+
+        Abbiamo visto come, per ogni token, viene recuperato o calcolato il suo embedding vettoriale basato su un modello di embedding pre-addestrato; gli embedding dei singoli token vengono combinati (ad es. facendone la media) per ottenere un singolo embedding vettoriale rappresentativo dell'intero prompt fornito come input iniziale per un modello di generazione di testo come, ad esempio, GPT.
+        
+        Il modello GPT utilizza l'embedding per catturare il contesto e il significato generale del prompt.
+        
+        Quindi il modello inizia a generare token dopo token la nuova sequenza di output, prevedendo la parola successiva più probabile data l'embedding del prompt e le parole generate fino a quel momento.
+        
+        Ad ogni passo, quindi, il nuovo token generato viene incorporato per calcolare un nuovo embedding contestuale aggiornato; questo embedding aggiornato viene quindi utilizzato per la previsione del token successivo, e così via fino al completamento dell'output generato.
+        
+        Quindi in sostanza, l'embedding iniziale del prompt fornisce il contesto semantico di partenza, e poi il modello genera testo mantenendo una rappresentazione densa del contesto emergente mentre produce l'output token per token. Gli embedding permettono quindi di catturare il significato e guidare la generazione di testo coerente e rilevante per il prompt iniziale.
+        
+        Questo è il flusso generale, ma ci sono poi molti dettagli architetturali e di training specifici ai diversi modelli di generazione di testo.
+    
         \subsubsection{Punti di attenzione}
+            Vediamo alcuni dettagli più specifici su come gli embedding vengono utilizzati in modelli di generazione di testo come GPT (su cui è basato Claude).
+
+            Abbiamo descritto come gli embedding sono vettori densi rappresentanti i singoli token di input, e che vengono appresi durante il pre-addestramento su vasti corpora di testo, insieme ai pesi del modello trasformatore. Gli embedding non sono però semplicemente lookup statici, ma vengono ulteriormente trasformati passandoli attraverso alcuni “punti di attenzione” nel trasformatore. Questo permette al modello di specializzarli per compiti specifici durante il processo di fine-tuning.
+            
+            Nel caso di Claude, gli embedding iniziali vengono calcolati sul prompt tokenizzato in input. Vengono poi passati ai punti di attenzione del trasformatore decoder, insieme ad uno speciale token di embedding per indicare l'inizio della generazione.
+            
+            Ad ogni passo di generazione, il decoder produce una distribuzione di probabilità sui possibili token successivi, date le rappresentazioni interne del contesto corrente (che includono gli embedding). Il token più probabile viene campionato e aggiunto all'output.
+            
+            Gli embedding del nuovo token vengono incorporati alle rappresentazioni del contesto, influenzando la generazione del token successivo. Questo processo si ripete ricorsivamente per generare l'intero output una parola alla volta.
+            
+            I punti di attenzione permettono al modello di fondere informazioni dagli embedding passati e futuri, costruendo rappresentazioni ricche di contesto per la generazione coerente.
+            
+            Claude utilizza anche delle regolazioni come il campionamento top-p per controllare la casualità dell'output rispetto alla massima verosimiglianza.
+            
+            Gli embedding e le loro trasformazioni all'interno del modello sono la chiave per catturare e propagare il significato contestuale durante la generazione, guidando l'output ad essere rilevante e coerente con il prompt. Questo processo iterativo di encoding/decoding degli embedding è fondamentale per GPT e modelli simili.
+            
+             I ``punti di attenzione'' (attention heads) sono un componente architetturale fondamentale all'interno dei modelli Trasformatori come quelli utilizzati da GPT e Claude, e fanno parte del meccanismo di auto-attenzione nei trasformatori. Ogni testa di attenzione è essenzialmente una funzione che mappa un vettore di query con le chiavi (keys) e i valori (values) provenienti dagli stati precedenti del modello. Questo consente al modello di concentrarsi sulle parti più rilevanti dell'input a ogni passo.
+            
+            Più specificamente, in un livello di attenzione ci sono tipicamente diversi punti di attenzione parallele (ad es. 8 o 16 punti). Ognuna impara a concentrarsi su diverse relazioni all'interno dei dati. L'output dei punti viene poi combinato attraverso un'operazione di concatenazione seguita da una trasformazione lineare.
+            
+            Quindi i punti di attenzione svolgono un ruolo cruciale nel consentire al modello di modellare efficacemente le dipendenze a lungo raggio nel testo e combinare informazioni da diverse posizioni dell'input in modo flessibile.
+            
+            E importante precisare che le punti di attenzione sono distinte dal concetto di ``top-p sampling'', introdotto in precedenza, che è una tecnica di campionamento utilizzata durante l'effettiva generazione di token di output, e che permette di aumentare la varietà dell'output rispetto al semplice campionamento dalla parola più probabile.
+            
+            Quindi le punti di attenzione sono parti integranti dell'architettura del modello volte a catturare le dipendenze di input, mentre il top-p è una tecnica di campionamento aggiuntiva applicata durante l'effettiva generazione di testo. Sono concetti e meccanismi diversi ma complementari all'interno di questi modelli linguistici.
+            
         \subsubsection{Fine tuning}
-    \subsection{Risposta ai prompt}
+            Ulteriore precisazione è riferita al fine-tuning (adattamento fine), tecnica comunemente utilizzata quando si adoperano LLM come GPT per compiti specifici, e che consiste nel seguente processo:
+            \begin{enumerate}
+                \item Si parte da un modello pre-addestrato su un'enorme quantità di dati di testo generico (come GPT originale addestrato da OpenAI). Questo pre-addestramento apprende embedding di parole, pesi delle punti di attenzione, ecc. in modo non supervisionato.
+
+                \item Si applica un ulteriore addestramento supervisionato su un dataset specifico per il compito desiderato (ad es. risposte a domande, riepilogo di testi, ecc). Durante questo fine-tuning, la maggior parte dei parametri del modello rimangono gli stessi dal pre-addestramento generico.
+
+                \item Però, gli ultimi strati del modello (di solito il cosiddetto layer normalization e il layer di output) vengono effettivamente ritarati dall'inizio in modo supervisionato sui dati del compito specifico.
+
+                \item Alcuni dei parametri del modello pre-addestrato vengono leggermente aggiornati (``fine-tuned'') per adattarsi meglio ai nuovi dati del compito. Questo fine-tuning permette di sfruttare l'apprendimento precedente del modello sui dati generici, trasferendo quelle conoscenze di base sul linguaggio al nuovo compito. Soltanto una piccola porzione dei parametri viene effettivamente riaddestratta in modo significativo.
+            \end{enumerate}
+            
+            Il risultato è un modello ``specializzato'' per uno scopo specifico, che mantiene però la maggior parte delle capacità di modellazione del linguaggio acquisite durante il pre-addestramento generico su larga scala.
+            
+            Nel caso di Claude, il fine-tuning conversazionale svolto da Anthropic gli permette di applicare le sue vaste conoscenze di base all'interazione e generazione di risposte rilevanti per l'utente.
+            
+            I LLM come GPT e Claude tipicamente hanno un'architettura di rete neurale molto profonda, composta da decine di ``layer'' o strati. Nello specifico:
+            \begin{itemize}
+                \item GPT-2, aveva 48 strati (layer) di codificatori trasformatori.
+                
+                \item GPT-3, l'attuale modello di punta di OpenAI, ha una versione con 96 strati per il modello più grande.
+                
+                \item Claude: i dettagli dell’architetture non sono resi pubblici, ma essendo basato su GPT, si può supporre abbia un numero simile di decine di strati.
+            \end{itemize}
+            
+            Ogni strato tipicamente contiene un sottoinsieme dei punti di attenzione multi-head, menzionate prima, insieme ad operazioni di normalizzazione dei dati e connessioni residuali che collegano gli strati.
+            
+            Questa profondità permette ai modelli di catturare pattern linguistici sempre più astratti e complessi mentre le informazioni fluiscono attraverso la rete. I primi strati tendono a elaborare aspetti più superficiali come le singole parole, mentre gli strati più profondi costruiscono rappresentazioni più ricche del significato e del contesto.
+            
+            Quindi in sintesi, mentre non si conoscono esattamente i dettagli di Claude, possiamo supporre che abbia un'architettura molto profonda con probabilmente 50-100 strati di codificatori e decodificatori trasformatori, in linea con le dimensioni e le capacità di GPT-3.
+            
+            Questa profondità di strati è una delle chiavi che permette a questi grandi modelli di linguaggio di raggiungere prestazioni così impressionanti su una vasta gamma di compiti linguistici complessi.
+            
+    \subsection{Risposta al prompt}
+        Il modello di generazione di testo, come GPT o Claude, non produce direttamente il testo di output finale in una forma facilmente leggibile. Piuttosto, genera una sequenza di token di output, che sono essenzialmente degli id numerici che rappresentano ogni parola/elemento di testo nel vocabolario del modello. Ad esempio, la sequenza di output del modello per la descrizione della fotosintesi potrebbe essere una lista di numeri come: \texttt{[827, 9132, 321, 57, 103, 9876, ...]}, Dove ogni numero corrisponde al token di una parola specifica come ``La'', ``fotosintesi'', ``è'', ``il'', ecc. nel vocabolario del modello. Quindi ciò che viene effettivamente ``fornito'' alla fase di output non è testo, ma questa sequenza di id di token numerici. A questo punto la fase di output deve quindi:
+        \begin{itemize}
+            \item Decodificare questa sequenza di id numerici utilizzando il vocabolario o il dizionario incorporato del modello per ottenere la sequenza di token testuali effettivi (parole).
+        
+            \item Unire questi token testuali in una singola stringa di testo coerente, rimuovendo eventuali caratteri speciali di tokenizzazione.
+        
+            \item Applicare eventuali regole di formattazione aggiuntive come punteggiatura, maiuscole/minuscole, ecc.
+        
+            \item Renderizzare e visualizzare questa stringa di testo finale nell'interfaccia desiderata, ad esempio una interfaccia di chat di conversazione come ChatGPT o Claude, producendo nel nostro esempio:
+        \end{itemize}
+
+        ``La fotosintesi è il processo attraverso il quale le piante convertono l'anidride carbonica e l'acqua in ossigeno e zuccheri utilizzando l'energia della luce solare...''
+        
+        La chiave è che l'output del modello di generazione è un flusso di token predetti che devono poi essere opportunamente renderizzati come testo, audio, immagini o qualsiasi altro formato a seconda dell'applicazione finale. Ma il processo fondamentale riguarda la generazione token per token guidata dagli embedding iniziali del prompt.
+        
+        In estrema sintesi, i prompt funzionano come catalizzatori che guidano il processo di generazione di testo nei modelli di linguaggio, permettendo agli utenti di ottenere informazioni specifiche, risposte a domande, o qualsiasi altro tipo di comunicazione testuale desiderata.
+        
         \subsubsection{Esempi}
+            Nel seguito vengono riportati alcuni esempi pratici che illustrano come il prompt engineering può modulare e guidare le risposte dei modelli di linguaggio avanzati, fornendo input specifici che direzionano il modello verso la produzione dell'output desiderato.
+            \begin{enumerate}
+                \item Assistente virtuale per il servizio clienti per risolvere le richieste di assistenza in modo efficiente.
+                \begin{itemize}
+                    \item Prompt inefficace: ``Aiutami.''
+                    
+                    \item Prompt migliorato: ``Sono un cliente che ha acquistato una fotocamera [specificare il modello preciso] ieri e non riesce a trovare il manuale d'uso nel pacco. Potresti inviarmi un link al manuale digitale?''
+                    
+                    \item Spiegazione: Il prompt migliorato fornisce dettagli specifici sul problema del cliente e sulla richiesta, guidando il modello a fornire una risposta precisa e direttamente utile, come il link al manuale d'uso, invece di rispondere in modo generico.
+                \end{itemize}
+
+                \item Generazione di contenuti per blog per creare articoli di blog pertinenti e informativi.
+                \begin{itemize}
+                    \item Prompt inefficace: ``Scrivi un articolo.''
+                    
+                    \item Prompt migliorato: ``Crea un articolo di 800 parole che esplori le implicazioni della realtà aumentata nella formazione medica, includendo statistiche recenti e esempi di applicazioni reali.''
+                    
+                    \item Spiegazione: Questo prompt specifica il tema dell'articolo, la lunghezza desiderata, e gli elementi che dovrebbero essere inclusi come le statistiche e gli esempi pratici. Il modello è così indirizzato a produrre un contenuto mirato e dettagliato che soddisfa i requisiti dati.
+                \end{itemize}
+
+                \item Supporto educativo per fornire spiegazioni comprensibili su concetti complessi.
+                \begin{itemize}
+                    \item Prompt inefficace: ``Parlami della teoria della relatività.''
+                    
+                    \item Prompt migliorato: ``Puoi spiegare la teoria della relatività e i suoi effetti sui viaggi spaziali a uno studente di liceo interessato all'astrofisica?''
+                    
+                    \item Spiegazione: Il prompt migliorato specifica il pubblico target (studente di liceo) e un contesto applicativo specifico (viaggi spaziali), permettendo al modello di adattare il livello di complessità e focalizzare la spiegazione su aspetti rilevanti del soggetto.
+                \end{itemize}
+
+                \item Contesto di sviluppo Web per guidare l’utente nella creazione di una pagina Web.
+                \begin{itemize}
+                    \item Prompt inefficace: ``Dimmi come usare HTML e CSS.''
+                    
+                    \item Problema: Questa richiesta è molto generica e non specifica quali aspetti di HTML e CSS l'utente vuole imparare. Non fornisce informazioni sul livello di esperienza dell'utente o su quali obiettivi specifici ha in mente.
+                    
+                    \item Prompt migliorato: ``Potresti mostrarmi come creare una layout di pagina web con una barra di navigazione in alto e un'intestazione centrata, usando HTML5 e CSS3 per un principiante?''
+                    
+                    \item Miglioramento: Questo prompt è molto più specifico e fornisce dettagli che aiutano a capire esattamente cosa l'utente vuole imparare. Include anche il livello di esperienza dell'utente (principiante), consentendo di adattare la risposta al suo livello di conoscenza.
+                    
+                    \item Spiegazione: Il prompt migliorato guida il modello o l'istruttore a fornire una risposta che è direttamente rilevante per le esigenze immediate dell'utente. Questo non solo rende la comunicazione più efficiente ma assicura anche che l'utente riceva istruzioni che può seguire e applicare direttamente. Inoltre, specificando che si tratta di HTML5 e CSS3, il prompt chiarisce che le tecniche dovrebbero essere moderne e aggiornate.
+                \end{itemize}
+
+                \item Troubleshooting -- Nell'ambito di progetti e problemi legati a specifiche apparecchiature, un'efficace formulazione del prompt può fare una grande differenza nel ricevere una guida specifica e utile. Ecco un esempio che fa riferimento ad Arduino.
+                \begin{itemize}
+                    \item Prompt inefficace: ``Il mio progetto Arduino non funziona.''
+                    
+                    \item Problema: Questa richiesta è troppo vaga. Non fornisce dettagli sul tipo di progetto, la natura del problema, né su cosa l'utente ha già provato per risolverlo.
+                   
+                    \item Prompt migliorato: ``Sto lavorando su un progetto Arduino che utilizza un sensore di temperatura (modello TMP36) per attivare un LED quando la temperatura supera i 25°C. Ho caricato lo sketch sul mio Arduino Uno, ma il LED rimane acceso tutto il tempo, indipendentemente dalla temperatura. Ho controllato le connessioni e sembrano corrette. Potresti aiutarmi a capire perché il LED non si spegne?''
+                    
+                    \item Miglioramento: Questo prompt è molto più dettagliato e fornisce informazioni specifiche sul progetto, sul comportamento atteso e su quello effettivo, e sulle azioni che l'utente ha già intrapreso per tentare di risolvere il problema.
+                    
+                    \item Spiegazione: Il prompt migliorato è utile per diverse ragioni:
+                    \begin{itemize}
+                        \item Contesto specifico: Include dettagli sui componenti usati (Arduino Uno, sensore TMP36), permettendo di identificare potenziali problemi specifici di tali componenti.
+            
+                        \item Descrizione del problema: Descrive chiaramente il problema osservato (LED sempre acceso) e il comportamento atteso (LED che si accende solo oltre i 25°C), che aiuta a focalizzare la risposta sulle possibili cause di questo comportamento.
+                        
+                        \item Azione precedente: Informa che le connessioni sono state controllate, il che aiuta a escludere una causa comune di problemi nei progetti Arduino.
+
+                        \item Questo tipo di prompt consente a chi risponde (sia esso un umano o un sistema AI) di offrire soluzioni più mirate e utili, riducendo il tempo necessario per arrivare a una soluzione efficace. Aiuta anche a evitare suggerimenti di base che l'utente ha già provato, ottimizzando così il processo di troubleshooting.
+                    \end{itemize}
+                \end{itemize}
+            \end{enumerate}
+            
+            
+            Questi esempi dimostrano come un'efficace progettazione del prompt possa influenzare direttamente la qualità e la pertinenza delle risposte generate da un modello di linguaggio, rendendole più utili e adatte alle necessità dell'utente.
+            
+            Implementando questi approcci, è possibile migliorare significativamente l'interazione tra l'utente e i modelli di IA, trasformando gli input generici in risposte specifiche e ben direzionate.
+            
+            Applicando i principi del prompt engineering anche alle richieste di aiuto o istruzioni in contesti tecnici come la programmazione o la risoluzione di problemi, possiamo migliorare significativamente l'efficacia delle risposte fornite, rendendo l'apprendimento più rapido e mirato.
+            
     \subsection{Prompt impliciti e prompt espliciti}
+        Vediamo ora in questo paragrafo cosa si intende e come applicare correttamente la distinzione tra prompt impliciti ed espliciti al fine di utilizzare i modelli di linguaggio in modo più efficace, adattandoli agli obiettivi specifici e al contesto di utilizzo, migliorando l'interazione tra l'utente e il modello e aumentando anche la probabilità di ottenere risposte utili e pertinenti.
+        
         \subsubsection{Prompt impliciti}
+            Input forniti a un modello di linguaggio che suggeriscono una risposta o un tipo di risposta senza specificare esplicitamente i dettagli esatti di cosa debba essere incluso nella risposta; lasciano maggiore spazio interpretativo al modello, permettendo una certa flessibilità nella generazione del testo e spesso stimolando risposte più creative o elaborate. Loro caratteristiche sono quelle di essere:
+            \begin{itemize}
+                \item \textbf{Meno direttivi}: Non danno istruzioni specifiche su come formulare la risposta.
+                
+                \item \textbf{Aperti}: Consentono al modello di utilizzare il proprio ``giudizio'' basato sull'addestramento ricevuto per decidere come meglio rispondere.
+                
+                \item \textbf{Flessibili}: Possono portare a una varietà di tipi di risposte, a seconda di come il modello interpreta il prompt.
+                
+                \item \textbf{Creativi}: Stimolano risposte più creative e meno vincolate da formati rigidi.
+            \end{itemize}
+            
         \subsubsection{Esempio di prompt implicito}
+            Un insegnante vuole generare materiale didattico su Shakespeare: \textit{``Parlami di Shakespeare.''} È un esempio di prompt implicito perché:
+            \begin{itemize}
+                \item \textbf{Non specifica il formato della risposta}: Il modello può decidere se fornire biografia dettagliata, analisi delle opere più famose, riassunto di un particolare pezzo teatrale, ecc.
+                
+                \item \textbf{Non impone un argomento specifico}: Il modello ha la libertà di selezionare da un'ampia gamma di argomenti correlati a Shakespeare: sua importanza nella letteratura inglese, influenza culturale delle sue opere, dettagli specifici su una delle tragedie o commedie …
+                
+                \item \textbf{Aperto a diverse interpretazioni}: A seconda di come il modello è stato addestrato e dei dati su cui è stato addestrato, potrebbe focalizzarsi su aspetti diversi della vita o delle opere di Shakespeare, mostrando come diversi modelli possono interpretare lo stesso prompt in modi diversi.
+            \end{itemize}
+
+            L'utilizzo di prompt impliciti può essere particolarmente utile quando si desidera esplorare la capacità di un modello di generare risposte informative e creative basate su una comprensione generale del contesto, senza vincoli rigidi su come quelle informazioni dovrebbero essere presentate.
+            
         \subsubsection{Prompt espliciti}
+            Input testuali forniti ai modelli di linguaggio che specificano in modo esplicito tipo, formato o contenuto della risposta desiderata; sono direttivi e lasciano al modello poco spazio di interpretazione, guidando la generazione della risposta in una direzione precisa. Loro caratteristiche sono quelle di essere:
+            \begin{itemize}
+                \item \textbf{Direttivi}: Forniscono istruzioni chiare su come il modello dovrebbe formulare la risposta.
+
+                \item \textbf{Specifici}: Dettagliano cosa deve essere incluso nella risposta: formato e spesso anche stile.
+                
+                \item \textbf{Prevedibili}: Tendono a generare risposte più prevedibili e uniformi perché il modello ha linee guida chiare da seguire.
+                
+                \item \textbf{Controllati}: Limitano la libertà creativa del modello, assicurando che la risposta sia strettamente correlata alla richiesta specifica dell'utente.
+            \end{itemize}
+            
         \subsubsection{Esempio di prompt esplicito}
-    \subsection{Prompt espliciti vs. promt impliciti: esempi}
+            Un giornalista vuole generare un articolo breve con focus specifico sulle implicazioni economiche di un recente evento politico: \textit{``Scrivi un riassunto di 300 parole che analizza le implicazioni economiche della recente rielezione del presidente, includendo specificamente l'impatto sul mercato azionario locale e le previsioni di crescita economica per il prossimo anno''}. Questo è un esempio di prompt esplicito perché:
+            \begin{itemize}
+                \item \textbf{Specifica il Contenuto}: Il modello è guidato a concentrarsi sulle ``implicazioni economiche'' della rielezione del presidente.
+            
+                \item \textbf{Determina il Formato e la Lunghezza}: Il prompt richiede espressamente un ``riassunto di 300 parole'', fornendo una direttiva chiara sulla lunghezza e il formato della risposta.
+            
+                \item \textbf{Dettaglia Aspetti Specifici da Includere}: Indica specificatamente che la risposta deve trattare ``l'impatto sul mercato azionario locale'' e ``le previsioni di crescita economica per il prossimo anno'', assicurando che questi punti siano coperti nella risposta.
+            \end{itemize}
+            
+            L'uso di prompt espliciti è particolarmente utile in contesti professionali o accademici dove sono richieste precisione e aderenza a criteri specifici. Assicurano che il modello produca risultati che sono rilevanti e utili per lo scopo specifico dell'utente, riducendo il rischio di risposte vaghe o non pertinenti.
+            
+            La distinzione tra prompt impliciti ed espliciti è fondamentale nel contesto del prompt engineering perché, come detto, influenza significativamente la precisione e la pertinenza delle risposte generate dai modelli di linguaggio. Questa distinzione permette di modulare il comportamento del modello in maniera più controllata e prevedibile. Riassumiamo nel seguito alcuni dei motivi per cui questa distinzione è importante (E: prompt esplicito – I: prompt implicito):
+            \begin{enumerate}
+                \item \textbf{Controllo sulla risposta}
+                \begin{itemize}
+                    \item[E.] Specificano chiaramente ciò che si desidera ottenere come risposta. Questo può includere non solo il contenuto, ma anche formato, stile o struttura della risposta.
+                    \item[I.] Lasciano più spazio all'interpretazione del modello e possono essere utilizzati quando si desidera vedere come il modello elabora e risponde basandosi solo sul suo apprendimento.
+                \end{itemize}
+
+                \item \textbf{Pertinenza e precisione delle Informazioni}
+                \begin{itemize}
+                    \item[E.] Tendono a generare risposte più precise e direttamente correlate alle esigenze informative dell'utente. Sono particolarmente utili in contesti professionali o educativi dove la precisione e la specificità sono critiche.
+                    \item[I.] Sebbene possano a volte risultare in risposte meno precise, possono stimolare risposte più creative o ampie, utili per esplorare un argomento in modi meno strutturati o per testare la capacità del modello di generare risposte innovative.
+                \end{itemize}
+
+                \item \textbf{Minimizzazione di bias e assunzioni}
+                \begin{itemize}
+                    \item[E.] Si riducono le possibilità che il modello si basi su assunzioni predefinite o bias non desiderati, dato che l'input fornisce direzioni chiare su cosa generare.
+                    \item[I.] Lasciando più libertà interpretativa al modello, possono a volte portare a risposte che riflettono bias non riconosciuti nell'addestramento o nelle meccaniche del modello stesso.
+                \end{itemize}
+
+                \item \textbf{Efficienza nella comunicazione}
+                \begin{itemize}
+                    \item[E.] Promuovono una comunicazione più efficiente in situazioni dove il tempo o la chiarezza sono essenziali, come nel supporto tecnico o nelle query specifiche.
+                    \item[I.] Possono essere più adatti per discussioni aperte, brainstorming o quando l'obiettivo è esplorare idee piuttosto che ottenere risposte dirette.
+                \end{itemize}
+            \end{enumerate}
+
+    \subsection{Prompt espliciti vs. prompt impliciti: esempi}
+        Ecco alcuni esempi pratici; con ChatGPT e Claude, che mostrano come differenti tipi di prompt (impliciti ed espliciti, impliciti) possano influenzare le risposte generate da un modello di linguaggio, fornendo anche delle spiegazioni su come e perché le risposte variano a seconda del tipo di prompt utilizzato.
+
+        \begin{itemize}
+            \item I prompt espliciti (figure \ref{fig:prompt_esplicito_chatgpt} e \ref{fig:prompt_esplicito_claude}) guidano il modello a fornire una risposta molto specifica, limitando il focus ai fattori chiave richiesti e aderendo al limite di parole impostato.
+            
+            \item I prompt impliciti (figure \ref{fig:prompt_impicito_chatgpt} e \ref{fig:prompt_impicito_claude}) permettono al modello più libertà interpretativa, risultando in una risposta più generica che copre il tema in modo ampio.
+        \end{itemize}
+        
+        \begin{figure}
+            \centering
+            % \includegraphics[width=0.5\linewidth]{}
+            \missingfigure{}
+            \caption{Esempio di prompt esplicito con ChatGPT}
+            \label{fig:prompt_esplicito_chatgpt}
+        \end{figure}
+
+        \begin{figure}
+            \centering
+            % \includegraphics[width=0.5\linewidth]{}
+            \missingfigure{}
+            \caption{Esempio di prompt esplicito con Claude}
+            \label{fig:prompt_esplicito_claude}
+        \end{figure}
+
+        \begin{figure}
+            \centering
+            % \includegraphics[width=0.5\linewidth]{}
+            \missingfigure{}
+            \caption{Esempio di prompt implicito con ChatGPT}
+            \label{fig:prompt_impicito_chatgpt}
+        \end{figure}
+
+        \begin{figure}
+            \centering
+            % \includegraphics[width=0.5\linewidth]{}
+            \missingfigure{}
+            \caption{Esempio di prompt implicito con Claude}
+            \label{fig:prompt_impicito_claude}
+        \end{figure}
+        
     \subsection{Il fenomeno delle ``allucinazioni''}
         \todo{Da scrivere}
         
