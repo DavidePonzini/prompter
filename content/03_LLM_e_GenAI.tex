@@ -105,7 +105,7 @@
                 
                 \item \textbf{Aiuto nei compiti}
                 \begin{itemize}
-                    \item Prompt: \textit{``Come posso risolvere questa equazione differenziale: }\textless{}segue descrizione dell’equazione\textgreater{}\textit{?''}
+                    \item Prompt: \textit{``Come posso risolvere questa equazione differenziale: }\textless{}segue descrizione dell'equazione\textgreater{}\textit{?''}
                     \item Utilizzo: Fornisce passaggi dettagliati per aiutare gli studenti con specifici problemi matematici.
                 \end{itemize}
                 
@@ -172,7 +172,7 @@
                     \begin{itemize}
                         \item Prompt: \textit{``Puoi aiutarmi a scrivere un codice Arduino per un sistema antifurto che attivi un allarme quando un sensore PIR rileva movimento?''}
                         \item Prompt: \textit{``Come posso programmare Arduino per inviare un SMS di allarme tramite modulo GSM quando si attiva il sensore di porta?''}
-                        \item Utilizzo: ricevere snippet di codice o guide passo passo per programmare le funzionalità desiderate dell’antifurto.
+                        \item Utilizzo: ricevere snippet di codice o guide passo passo per programmare le funzionalità desiderate dell'antifurto.
                     \end{itemize}
                     
                     \item Testing e Debugging
@@ -186,10 +186,10 @@
 
             In sintesi, il prompt engineering non solo migliora la funzionalità e l'accessibilità dei sistemi di IA, ma apre anche nuove strade per la loro applicazione pratica in campi sempre più ampi, evidenziando l'intersezione tra la tecnologia avanzata e le esigenze umane quotidiane.
             
-    \subsection{Concetti base dell’architettura Transformer}
+    \subsection{Concetti base dell'architettura Transformer}
         Prima che emergessero in modo ``dirompente'' i modelli basati sull'architettura Transformer, vi erano vari tipi di Large Language Models (LLM) che utilizzavano altre architetture di rete neurale. Alcuni dei più noti sono basati su architetture di Reti Neurali Ricorrenti (Recurrent Neural Network - RNN) e le loro varianti come LSTM (Long Short-Term Memory) e GRU (Gated Recurrent Units). Questi modelli erano ampiamente utilizzati per il trattamento di sequenze di dati, in particolare nel linguaggio naturale (Natural Language – NL).
 
-        Anche se i modelli basati su Transformer sono oggi dominanti nel campo dell'elaborazione del linguaggio naturale (Natural Language Processing – NLP) grazie alla loro maggiore efficienza e capacità di gestire lunghe dipendenze, questi modelli più vecchi hanno ancora applicazioni valide e continuano ad essere oggetto di ricerca e sviluppo per specifici scenari d’uso, come generazione di testo, completamento automatico del testo, riconoscimento del parlato, analisi dei sentimenti, traduzione automatica. Questi modelli dimostrano che, nonostante l'efficienza dei Transformer in molte aree, le RNN e le loro varianti rimangono tecniche preziose e rilevanti per molti compiti di elaborazione delle sequenze. Ogni tipo di modello ha suoi punti di forza e sue limitazioni, e la scelta del modello più adatto può dipendere da diversi fattori, tra cui natura del compito, disponibilità di dati di addestramento, risorse computazionali disponibili.
+        Anche se i modelli basati su Transformer sono oggi dominanti nel campo dell'elaborazione del linguaggio naturale (Natural Language Processing – NLP) grazie alla loro maggiore efficienza e capacità di gestire lunghe dipendenze, questi modelli più vecchi hanno ancora applicazioni valide e continuano ad essere oggetto di ricerca e sviluppo per specifici scenari d'uso, come generazione di testo, completamento automatico del testo, riconoscimento del parlato, analisi dei sentimenti, traduzione automatica. Questi modelli dimostrano che, nonostante l'efficienza dei Transformer in molte aree, le RNN e le loro varianti rimangono tecniche preziose e rilevanti per molti compiti di elaborazione delle sequenze. Ogni tipo di modello ha suoi punti di forza e sue limitazioni, e la scelta del modello più adatto può dipendere da diversi fattori, tra cui natura del compito, disponibilità di dati di addestramento, risorse computazionali disponibili.
         
         Il concetto di ``prompt engineering'' è più comunemente associato con i modelli di linguaggio più recenti basati su Transformer, come GPT o Claude, che sono in modo particolare sensibili e reattivi agli input specifici (prompt) che ricevono. Questo è dovuto alla loro capacità di generare risposte coerenti e dettagliate basate su enormi quantità di dati di addestramento. Tuttavia, la tecnica di fornire input specificamente formulati per ottenere i risultati desiderati può essere applicata, in una certa misura, anche ai modelli basati su RNN, LSTM e GRU. In generale, il prompt engineering in contesti che non includono modelli Transformer è meno accentuato e spesso non è etichettato esplicitamente come tale. Tuttavia, il principio di ottimizzare e adattare gli input per migliorare le prestazioni del modello è un concetto fondamentale nel machine learning e può essere applicato a qualsiasi tipo di modello, compresi RNN, LSTM e GRU.
         
@@ -213,7 +213,7 @@
         \end{itemize}
         
         \subsubsection{LLM, architettura Transformer e machine learning}
-            LLM e architettura Transformer sono strettamente correlati al machine learning (ML), con riferimento particolare all’apprendimento profondo (deep learning), sotto-categoria di algoritmi ML caratterizzata dall'uso di reti neurali con molteplici livelli di elaborazione.
+            LLM e architettura Transformer sono strettamente correlati al machine learning (ML), con riferimento particolare all'apprendimento profondo (deep learning), sotto-categoria di algoritmi ML caratterizzata dall'uso di reti neurali con molteplici livelli di elaborazione.
             \begin{itemize}
                 \item \textbf{Reti Neurali Profonde}: I LLM, come GPT, BERT, Claude, … sono basati su reti neurali profonde, che sono uno degli strumenti principali nel ML per modellare complessi pattern nei dati. Queste reti apprendono da vasti dataset per generalizzare nuove informazioni che non sono state viste durante l'addestramento.
                 
@@ -409,7 +409,7 @@
             In sintesi, \texttt{top\_p = 0.9} è una scelta che spesso rappresenta un buon compromesso per molti casi d'uso, specialmente quelli che richiedono un bilanciamento tra novità e coerenza del contenuto generato, come nella scrittura creativa, nel marketing, e in altre applicazioni di narrazione assistita dall'IA.
         
         \item
-            \textbf{Lunghezza Massima}: Limitata a 150 token per mantenere le descrizioni abbastanza concise ma comunque consentire al modello un po’ di spazio espressivo.
+            \textbf{Lunghezza Massima}: Limitata a 150 token per mantenere le descrizioni abbastanza concise ma comunque consentire al modello un po' di spazio espressivo.
         
         \item
             \textbf{Sequenze di Stop}: Potrebbe essere ad esempio``\texttt{\#\#\#}'' o ``\texttt{</descrizione>}'' per segnalare chiaramente la fine di ciascuna descrizione.
@@ -446,7 +446,7 @@
 
         \begin{Verbatim}[frame=single]
 import openai                  #importa la libreria OpenAI per
-                               #interagire con l’API di GPT-3
+                               #interagire con l'API di GPT-3
 
 response = openai.Completion.create(
     engine="text-davinci-003", #specifica il modello da utilizzare: "text-davinci-003"
@@ -591,7 +591,7 @@ print(response.choices[0].text.strip()) #prende risposta generata dal modello
         \subsubsection{Embedding}
             Un embedding, nel contesto dell'interpretazione di un prompt, è una rappresentazione vettoriale (una sequenza di numeri) dei tag del prompt in uno spazio ad alta dimensione. Il processo di creazione di un embedding avviene tipicamente attraverso l'utilizzo di modelli di embedding pre-addestrati, come word2vec, GloVe o BERT. Questi modelli sono stati addestrati su enormi quantità di testo per imparare a mappare le parole e le frasi in rappresentazioni vettoriali in modo tale che parole che appaiono frequentemente in contesti simili o frasi simili siano mappate in vettori vicini nello spazio vettoriale. Tali modelli hanno già mappato milioni di parole in vettori di numeri (di solito da 100 a 300 dimensioni).
 
-            Questa rappresentazione vettoriale cattura le relazioni semantiche e sintattiche tra le parole nel testo, principalmente attraverso un approccio statistico basato sui dati utilizzati durante l’addestramento, permettendo ai modelli NLP di comprendere meglio il significato del prompt.
+            Questa rappresentazione vettoriale cattura le relazioni semantiche e sintattiche tra le parole nel testo, principalmente attraverso un approccio statistico basato sui dati utilizzati durante l'addestramento, permettendo ai modelli NLP di comprendere meglio il significato del prompt.
             
             Ad esempio, se le parole ``fotosintesi'' e ``clorofilla'' appaiono spesso vicine nello stesso contesto in molti testi, il modello impara che queste parole sono semanticamente correlate e assegnerà loro embedding vettoriali simili e vicini nello spazio vettoriale. Inoltre, i modelli possono anche catturare relazioni sintattiche simili esaminando schemi grammaticali ricorrenti. Ad esempio, parole che svolgono ruoli sintattici simili in molte frasi tenderanno ad avere embedding simili.
             
@@ -708,7 +708,7 @@ print(response.choices[0].text.strip()) #prende risposta generata dal modello
                 
                 \item GPT-3, l'attuale modello di punta di OpenAI, ha una versione con 96 strati per il modello più grande.
                 
-                \item Claude: i dettagli dell’architetture non sono resi pubblici, ma essendo basato su GPT, si può supporre abbia un numero simile di decine di strati.
+                \item Claude: i dettagli dell'architetture non sono resi pubblici, ma essendo basato su GPT, si può supporre abbia un numero simile di decine di strati.
             \end{itemize}
             
             Ogni strato tipicamente contiene un sottoinsieme dei punti di attenzione multi-head, menzionate prima, insieme ad operazioni di normalizzazione dei dati e connessioni residuali che collegano gli strati.
@@ -767,7 +767,7 @@ print(response.choices[0].text.strip()) #prende risposta generata dal modello
                     \item Spiegazione: Il prompt migliorato specifica il pubblico target (studente di liceo) e un contesto applicativo specifico (viaggi spaziali), permettendo al modello di adattare il livello di complessità e focalizzare la spiegazione su aspetti rilevanti del soggetto.
                 \end{itemize}
 
-                \item Contesto di sviluppo Web per guidare l’utente nella creazione di una pagina Web.
+                \item Contesto di sviluppo Web per guidare l'utente nella creazione di una pagina Web.
                 \begin{itemize}
                     \item Prompt inefficace: ``Dimmi come usare HTML e CSS.''
                     

@@ -1,16 +1,208 @@
 \section{Formulazione dei prompt}
+    \todo{Scrivere introduzione al capitolo}
+
     \subsection{Introduzione al prompt engineering}
+        Il \textbf{Prompt Engineering} è un campo emergente nell'ambito dell'intelligenza artificiale (\textbf{IA}) che si focalizza sulla progettazione e formulazione di input testuali (domande, quesiti, richieste), chiamati \textbf{prompt}, per guidare i modelli di machine learning, in particolare i \textit{modelli di linguaggio (Language Models, }\textbf{LM}\textit{)}, verso risposte desiderate e accurate.
+
+        Un prompt ben progettato può significativamente migliorare l'efficacia e la precisione delle risposte del LM, sfruttando al meglio le sue capacità di apprendimento e di generazione del linguaggio.
+        
+        Il \textbf{Prompter} è colui che ha le competenze di prompt engineering, utili a comprendere meglio le capacità e i limiti di questi modelli di linguaggio, con particolare riferimento ai \textit{modelli di linguaggio di grandi dimensioni (Large Language Models, }\textbf{LLM}\textit{)}, specifiche tipologie di modelli di IA progettati per comprendere, generare e manipolare il linguaggio umano.
+        
+        Questi modelli sono addestrati su vasti corpus di testo per apprendere le strutture linguistiche, le relazioni tra le parole e i vari modi in cui il linguaggio può essere utilizzato. I ricercatori utilizzano il prompt engineering per migliorare la capacità dei LLM su un'ampia gamma di attività comuni e complesse come la risposta alle domande e il ragionamento aritmetico. Gli sviluppatori utilizzano il prompt engineering per progettare tecniche di prompt robuste ed efficaci che si interfacciano con i LLM e altri strumenti.
+        
+        In questo contesto, il prompt engineering si rivela una componente critica. I prompt servono non solo a inquadrare la domanda in modo che l'IA possa comprendere e rispondere adeguatamente, ma anche a indirizzare il modello verso specifici stili di risposta, toni e livelli di dettaglio.
+        
+        Per esempio, modificando sottilmente il prompt, un utente può ottenere risposte formali, informali, tecniche o persino creative, rendendo questa pratica essenziale per un'ampia gamma di applicazioni: dalla generazione automatica di testi alla conversazione interattiva, dal supporto clienti alla creazione di contenuti didattici e informativi, alla coprogettazione di programmi e sistemi, ecc.
+        
     \subsection{Prompt semplici ed efficaci}
+        Come abbiamo già detto, formulare prompt efficaci è una competenza essenziale specialmente quando si lavora con modelli di linguaggio avanzati. Riprendendo anche quanto già discusso, riportiamo nel seguito una serie di tecniche e strategie specifiche che possono essere impiegate per ottimizzare i prompt.
+        \begin{enumerate}
+            \item \textbf{Context -- Definire il contesto specifico}: Anziché fare richieste generiche, delineare il contesto in cui la tua domanda o richiesta si inserisce. Questo può includere il setting, il pubblico di riferimento, o la situazione specifica.
+            
+            \textit{``In un'aula di scuola elementare, come spiegheresti il ciclo dell'acqua in modo che sia comprensibile per bambini di 8 anni?''}
+            
+            \item \textbf{Constraints -- Specificare i vincoli di risposta}: Indicare limitazioni o regole che il modello deve seguire nella generazione della risposta, come la lunghezza del testo, lo stile, o il formato.
+            
+            \textit{``Descrivi in meno di 100 parole come l'intelligenza artificiale può migliorare la gestione del tempo.''}
+            
+            \item \textbf{Keywords -- Usare parole chiave strategiche/rilevanti}: Utilizzare termini che sono cruciali per la comprensione del prompt e per la direzione della risposta.
+            
+            \textit{``Elabora una guida step-by-step su come implementare il machine learning in un'applicazione mobile già esistente.''}
+            
+            \item \textbf{Question framing -- Formulare la domanda in modo mirato}: Strutturare la tua domanda in modo che incoraggi specifici tipi di risposta.
+            
+            \textit{``Quali sono i rischi legali di non conformarsi al GDPR per una startup tecnologica in Europa?''}
+            
+            \item \textbf{Suggestive detailing -- Fornire dettagli che suggeriscono la profondità desiderata della risposta}: Dettagliare un prompt con esempi o scenari può aiutare a guidare la profondità e la precisione delle informazioni richieste.
+            
+            \textit{``Analizza il discorso di Martin Luther King `I Have a Dream', sottolineando come usa la retorica per coinvolgere e ispirare il suo pubblico.''}
+            
+            \item \textbf{Pre-setting the tone -- Impostare il tono appropriato}: Specificare il tono o lo stile emotivo della risposta, che può variare da formale a informale, o da tecnico a conversazionale.
+            
+            \textit{``Scrivi un riassunto informale che spiega il principio di funzionamento dei motori elettrici per un blog di appassionati di tecnologia.''}
+            
+            \item \textbf{Progressive detailing -- Dettagliare progressivamente}: Iniziare con un prompt base e poi aggiungere dettagli o specifiche in follow-up, basandosi sulla risposta iniziale.
+            
+            \textit{``Cosa è la fotosintesi?''} seguito da \textit{``Puoi spiegare come questo processo influisce sulle dinamiche dell'ecosistema?''}
+            
+            \item \textbf{Feedback loop integration -- Utilizzare il feedback per rifinire i prompt}: Dopo una risposta iniziale, utilizzare il feedback per modificare o aggiustare il prompt al fine di ottenere risposte più precise o approfondite.
+            
+            Dopo una risposta generica, si potrebbe chiedere `\textit{`Puoi approfondire come le variazioni di temperatura influenzano la fotosintesi?''}
+        \end{enumerate}
+        
+        Queste tecniche, utilizzate singolarmente o in combinazione, possono migliorare significativamente la qualità e la rilevanza delle risposte generate dai modelli di linguaggio, assicurando che i risultati siano all'altezza delle aspettative e delle necessità specifiche dell'utente.
     \subsection{Prompt impliciti ed espliciti}
         \todo{Da scrivere}
         
     \subsection{Precisione e chiarezza nella formulazione dei prompt}
-        \subsubsection{Riduzione dell’ambiguità}
+        La precisione e la chiarezza nei prompt sono elementi cruciali per massimizzare l'efficacia con cui un modello di linguaggio risponde alle richieste degli utenti. Questi principi sono fondamentali per assicurare che il modello non solo comprenda l'intento dell'utente ma produca anche risposte che siano il più possibile pertinenti e utili. Riportiamo nel seguito alcune buone pratiche per evidenziare come la precisione e la chiarezza influenzano le prestazioni dei modelli di linguaggio:
+        \begin{itemize}
+            \item Riduzione dell'ambiguità
+            \item Guida specifica per il modello
+            \item Miglioramento dell'interazione uomo-macchina
+            \item Ottimizzazione del training e del tuning del modello
+        \end{itemize}
+        
+        \subsubsection{Riduzione dell'ambiguità}
+            \textbf{Precisione}: Un prompt preciso evita ambiguità specificando esattamente cosa l'utente desidera. Questo aiuta il modello a focalizzare la sua \textit{attenzione} sulle informazioni rilevanti, riducendo il rischio di interpretazioni errate o di deviazioni dal tema richiesto.
+            \begin{itemize}
+                \item \textbf{Esempio}: \textit{``Dimmi qualcosa sul clima.''}
+                \item \textbf{Problema}: prompt vago che non specifica quale aspetto del clima l'utente desidera esplorare, come le tendenze climatiche attuali, previsioni meteorologiche specifiche per una località, o impatti del cambiamento climatico. L'IA potrebbe generare una risposta generale sul concetto di clima, non utile se l'utente cercava, per esempio, previsioni del tempo per pianificare un evento.
+                \item \textbf{Prompt preciso}: \textit{``Dimmi le previsioni meteorologiche nel prossimo fine settimana a Roma.''}
+                \item \textbf{Beneficio}: Specifichiamo la località (\textit{``Roma''}) e il tempo (\textit{``prossimo fine settimana''}), guidando il modello a fornire una risposta focalizzata e direttamente utile all'utente. Questo riduce l'ambiguità e aumenta la probabilità di una risposta soddisfacente.
+            \end{itemize}
+            
+            \textbf{Chiarezza}: Un prompt chiaro è formulato in modo tale che sia facile da comprendere per il modello. Un prompt chiaro utilizza una grammatica corretta e termini definiti per evitare malintesi; frasi complesse o linguisticamente confuse possono portare a malintesi o a errori nella generazione delle risposte.
+            \begin{itemize}
+                \item \textbf{Esempio}: \textit{``Qual è il tempo, sai, per la cosa là?''}
+                \item \textbf{Problema}: manca di chiarezza; utilizza un linguaggio informale e vago (\textit{``cosa là''}), che potrebbe confondere il modello, risultando in una risposta errata o irrilevante. L'IA potrebbe non essere in grado di determinare se \textit{``tempo''} si riferisce alle condizioni meteorologiche o ad altro, e \textit{``cosa là''} non fornisce indizi contestuali utili.
+                \item \textbf{Prompt Chiaro}: \textit{``Puoi mostrarmi il meteo attuale a Milano?''}
+                \item \textbf{Beneficio}: Usando termini specifici e un linguaggio diretto, il prompt elimina confusioni e ambiguità. Specificando \textit{``meteo attuale''} e \textit{``Milano''}, si facilita per il modello il compito di fornire una risposta precisa e contestualmente appropriata.
+            \end{itemize}
+
         \subsubsection{Guida specifica per il modello}
-        \subsubsection{Miglioramento dell’interazione uomo-macchina}
+            \textbf{Contesto e dettagli}: La precisione del contesto in un prompt è cruciale per indirizzare il modello a considerare e utilizzare informazioni specifiche pertinenti alla richiesta. Fornire dettagli sul contesto, anche con esempi, aiuta il modello a produrre risposte che sono non solo accurate ma anche direttamente applicabili alla situazione o al settore di interesse dell'utente.
+            \begin{itemize}
+                \item \textbf{Esempio}: \textit{``Spiegami la blockchain.''}
+                \item \textbf{Problema}: prompt generale che non specifica il contesto nel quale l'utente è interessato a comprendere o applicare la blockchain. L'IA potrebbe fornire una definizione troppo generica, sebbene corretta, e non focalizzata sulle necessità reali che potrebbe non soddisfare le esigenze specifiche dell'utente.
+                \item \textbf{Prompt preciso}: \textit{``Puoi spiegarmi come la blockchain viene utilizzata nel settore finanziario, con esempi di applicazioni pratiche?''}
+                \item \textbf{Beneficio}: Includendo un settore specifico (\textit{``settore finanziario''}) e chiedendo esempi pratici, il prompt guida il modello a fornire una risposta su misura che è diretta e rilevante per le esigenze specifiche dell'utente.
+            \end{itemize}
+            \textbf{Aspettative sull'output}: Le aspettative sull'output garantiscono che la struttura della risposta sia in linea con necessità o preferenze dell'utente. Specificare il formato desiderato (ad es., elenco puntato, paragrafo, formula matematica) elimina incertezze su come presentare le informazioni, facilitando l'uso immediato delle risposte e aumentando la soddisfazione utente.
+            \begin{itemize}
+                \item \textbf{Esempio}: \textit{``Descrivimi il processo di fotosintesi.''}
+                \item \textbf{Problema}: Senza indicazioni sul formato desiderato, il modello potrebbe organizzare le informazioni in un modo non utile all'utente. L'IA potrebbe fornire un paragrafo lungo e dettagliato, quando un elenco puntato sarebbe stato più chiaro.
+                \item \textbf{Prompt preciso}: \textit{``Puoi elencarmi i passaggi principali del processo di fotosintesi in forma di elenco puntato?''}
+                \item \textbf{Beneficio}: Specificando che la risposta deve essere organizzata come un elenco puntato, il prompt chiarisce come l'informazione dovrebbe essere presentata. Questo rende la risposta più facile da utilizzare e più adatta per scopi di studio o revisione rapida.
+            \end{itemize}
+            
+        \subsubsection{Miglioramento dell'interazione uomo-macchina}
+            \textbf{Efficienza}: L'efficienza nei prompt si traduce in un processo di comunicazione più rapido e meno frustrante per l'utente, che può ottenere le informazioni desiderate senza dover ripetere o specificare ulteriormente la sua richiesta (riducendo quindi la necessità di follow-up o correzioni successive), particolarmente importante in contesti di utilizzo pratico dove gli utenti si aspettano risposte rapide, come in applicazioni commerciali o durante l'interazione con assistenti virtuali.
+            \begin{itemize}
+                \item \textbf{Esempio}: \textit{``Voglio sapere di più.''}
+                \item \textbf{Problema}: prompt estremamente vago che non fornisce alcun contesto o dettaglio su ciò che l'utente desidera sapere. Ciò potrebbe portare a una serie di domande di follow-up da parte del modello per cercare di capire l'argomento di interesse, risultando in un'interazione lunga e inefficace. L'IA potrebbe chiedere, \textit{``Di cosa vuoi sapere di più?''} necessitando ulteriori input da parte dell'utente per procedere.
+                \item \textbf{Prompt Efficiente}: \textit{``Voglio sapere di più sui vantaggi dell'energia solare per le abitazioni domestiche.''}
+                \item \textbf{Beneficio}: Specificando chiaramente l'argomento di interesse e il contesto (\textit{``energia solare per le abitazioni domestiche''}), il prompt dirige immediatamente il modello a fornire una risposta specifica e pertinente, eliminando la necessità di ulteriori chiarimenti.
+            \end{itemize}
+            \textbf{Soddisfazione dell'utente}: La soddisfazione dell'utente, d'altra parte, è cruciale per mantenere gli utenti impegnati e soddisfatti con l'interazione con sistemi basati su IA. Prompt ben progettati che conducono a risposte pertinenti e ben strutturate possono fare la differenza tra un utente che percepisce l'IA come uno strumento utile e uno che lo vede come un gadget frustrante e inutile. Questo aspetto è fondamentale non solo per l'usabilità ma anche per l'accettazione e la fiducia a lungo termine nelle tecnologie di IA.
+            \begin{itemize}
+                \item \textbf{Esempio}: \textit{``Parlami delle diete.''}
+                \item \textbf{Problema}: Anche se leggermente specifico, questo prompt rimane generico e potrebbe portare a una risposta ampia e generica che potrebbe non soddisfare le esigenze specifiche dell'utente, come perdere peso, mantenere una dieta equilibrata, o informazioni su diete particolari. L'IA potrebbe fornire un'introduzione generale sulle diete, che può risultare troppo generica e poco utile.
+                \item \textbf{Prompt Orientato alla Soddisfazione dell'Utente}: \textit{``Quali sono le migliori diete per migliorare la salute cardiovascolare secondo gli studi recenti?''}
+                \item \textbf{Beneficio}: Con un prompt ben definito che chiede specificamente di diete per la salute cardiovascolare basate su studi recenti, l'IA è in grado di fornire una risposta più mirata e dettagliata. Questo non solo soddisfa meglio l'utente, ma aumenta anche la percezione di ricevere una consulenza qualificata e basata su evidenze.
+            \end{itemize}
+            
         \subsubsection{Ottimizzazione del training e del tuning del modello}
+            Per quanto riguarda l'addestramento mirato e il fine-tuning di modelli di IA come GPT-3 di OpenAI o Claude di Anthropic, occorre fare alcune precisazioni, riprendendo quanto già introdotto nel Capitolo 1.
+
+            I modelli standard come GPT-3 o Claude non possono essere personalmente addestrati o fine-tuned dagli utenti finali. Vengono pre-addestrati dalle rispettive aziende su vasti corpus di dati e forniti come servizi che gli utenti possono interrogare. Questi modelli sono progettati per essere abbastanza generici da gestire una vasta gamma di domande e argomenti. Sia OpenAI che Anthropic hanno però introdotto capacità di fine-tuning per i loro modelli di linguaggio. Questo permette agli sviluppatori e alle organizzazioni di addestrare ulteriormente il modello su un set di dati specifico per migliorarne le risposte in un determinato dominio o settore.
+            
+            Per utilizzare questa funzionalità di fine-tuning, occorre tipicamente avere un accesso speciale alle piattaforme di OpenAI o Anthropic, oltre a una quantità significativa di dati di esempio pertinenti per il caso d'uso specifico. Questo processo richiede una conoscenza tecnica avanzata, come la capacità di preparare e formattare correttamente i dati di addestramento. Inoltre, il fine-tuning può essere un processo costoso in termini di risorse computazionali. Nel caso di Claude, Anthropic offre un servizio di fine-tuning costituzionale che permette di allineare ulteriormente il modello con obiettivi, valori e preferenze specifiche durante l'addestramento aggiuntivo. In sintesi, mentre i modelli di base sono generici, le rispettive aziende forniscono opzioni di fine-tuning avanzate che richiedono risorse e competenze tecniche specifiche per adattare i modelli a casi d'uso mirati.
+            
+            Se le capacità di fine-tuning di OpenAI e Claude non sono sufficienti per le nostre necessità, si può considerare l'utilizzo delle piattaforme di machine learning introdotte nel Capitolo 1, come Google Cloud AI o AWS Machine Learning, dove si può costruire e addestrare i nostri modelli personalizzati, oppure framework open source come TensorFlow o PyTorch, che permettono agli sviluppatori di costruire e addestrare i propri modelli da zero, offrendo il massimo livello di personalizzazione. L'esercitazione di queste competenze esulano però dagli obiettivi di questo volume e, anche senza la capacità di addestrare o mettere a punto direttamente il modello, ci discuteremo nel seguito il modo più adeguato per migliorare in modo significativo le prestazioni di un LLM attraverso tecniche avanzate di prompt engineering. Questo approccio consiste nell'ottimizzare come formulare le richieste al modello per ottenere le migliori risposte possibili.
+
+            \textbf{Addestramento mirato}: Durante il training, modelli che ricevono prompt chiari e ben definiti possono ``imparare'' in modo più efficace, sviluppando una migliore capacità di risposta per futuri prompt simili. L'addestramento mirato è cruciale perché consente al modello di IA di sviluppare competenze specifiche e approfondite in aree definite, piuttosto che una conoscenza superficiale e generica. Questo tipo di addestramento è particolarmente utile in applicazioni professionali o tecniche dove la precisione e la profondità della conoscenza sono essenziali.
+
+            \begin{itemize}
+                \item \textbf{Esempio}: \textit{``Rispondi a questa domanda.''}
+                \item \textbf{Problema}: Un prompt generico come questo fornisce pochissime indicazioni sul tipo di risposta desiderata o sul contesto della domanda, rendendo difficile per il modello di IA ``imparare'' come rispondere efficacemente in situazioni specifiche.
+                \item \textbf{Risultato potenziale}: Il modello potrebbe sviluppare una capacità generica di risposta che non è ottimizzata per nessun tipo di query specifica, risultando in prestazioni subottimali quando si trova di fronte a domande complesse o tecniche.
+                \item \textbf{Prompt specifico per l'addestramento}: \textit{``Fornisci una spiegazione dettagliata dei passaggi di risoluzione di un'equazione di secondo grado.''}
+                \item \textbf{Beneficio}: Un prompt chiaro e specifico come questo guida il modello durante il training a concentrarsi su come strutturare e presentare risposte che riguardano la risoluzione di problemi matematici specifici. Ciò aiuta il modello a ``imparare'' in modo più efficace, sviluppando competenze specializzate che possono essere applicate a futuri prompt simili.
+            \end{itemize}
+
+            \textbf{Fine-tuning}: In fase di fine-tuning, i prompt formulati in modo preciso aiutano a perfezionare le capacità del modello su compiti specifici, migliorando le prestazioni generali in scenari di utilizzo reale.
+
+            Il fine-tuning, d'altra parte, è un processo che affina ulteriormente le capacità di un modello di IA dopo il suo addestramento iniziale. Eseguire un fine-tuning efficace richiede prompt precisi che definiscano chiaramente gli aspetti del modello che necessitano di miglioramento. Questo processo non solo migliora la qualità delle risposte del modello ma assicura anche che esse siano altamente pertinenti e adattate alle esigenze specifiche degli utenti finali.
+            \begin{itemize}
+                \item \textbf{Esempio}: \textit{``Migliora le tue risposte.''}
+                
+                \item \textbf{Problema}: Questo tipo di prompt non fornisce indicazioni specifiche su quali aspetti della risposta necessitano di miglioramento o in quali aree il modello dovrebbe concentrare il suo apprendimento. Il fine-tuning risulta quindi generico e meno efficace.
+                
+                \item \textbf{Risultato potenziale}: Il modello potrebbe non sviluppare miglioramenti significativi in aree cruciali, mantenendo prestazioni medie in una vasta gamma di domande.
+                
+                \item \textbf{Prompt dettagliato per il fine-tuning}: \textit{``Perfeziona la tua capacità di generare riassunti concisi di articoli scientifici in campo biomedico.''}
+                
+                \item \textbf{Beneficio}: Specificando esattamente cosa migliorare e in quale contesto, il fine-tuning diventa molto più diretto e efficace. Questo permette al modello di affinare le proprie capacità in un compito molto specifico, migliorando notevolmente le sue prestazioni in scenari di utilizzo reale dove tali capacità sono richieste.
+            \end{itemize}
+
+            Come emerge da quanto riportato, sia l'addestramento mirato che il fine-tuning sono essenziali per massimizzare le prestazioni di un modello di IA, rendendolo non solo più competente ma anche più specializzato nelle risposte che fornisce, aumentando così la sua utilità e affidabilità in contesti applicativi reali.
+
+            Completiamo questo paragrafo con un ultimo esempio in cui supponiamo che un utente voglia informazioni sull'efficacia di un farmaco. Un prompt vago potrebbe essere \textit{``Informazioni sul farmaco X.''}, che potrebbe portare a una vasta gamma di risposte. Un prompt più preciso e chiaro sarebbe: \textit{``Fornisci una sintesi delle ultime ricerche sull'efficacia del farmaco X nel trattamento della condizione Y, includendo dati statistici recenti e conclusioni principali degli studi del 2023.''}; questo secondo prompt guida il modello a fornire una risposta focalizzata e dettagliata, esattamente in linea con il bisogno informativo specifico dell'utente.
+            
+            In conclusione, la precisione e la chiarezza nei prompt non sono solo importanti per ottenere risposte corrette; sono essenziali per sfruttare pienamente le capacità avanzate dei modelli di linguaggio, rendendo l'interazione con essi più efficace, efficiente e soddisfacente.
+            
         \subsubsection{Esempi}
+            Per aiutare il lettore a padroneggiare l'arte del prompt engineering, è essenziale fornire esempi concreti e suggerimenti pratici che illustrino come formulare prompt efficaci per ottenere risposte desiderate dai modelli di linguaggio. Ecco nel seguito alcuni esempi (E) e suggerimenti pratici (S).
+
+            \begin{enumerate}[start=1,label={\bfseries{}E\arabic*.}]
+                \item \textbf{Sviluppo di Chatbot}:
+                    \begin{itemize}
+                        \item \textbf{Prompt inefficace}: \textit{``Dimmi qualcosa su di te.''}
+                        \item \textbf{Prompt migliorato}: \textit{``Raccontami un aneddoto divertente della tua esperienza nel servizio clienti.''}
+                        \item \textbf{Spiegazione}: Il secondo prompt è specifico e guida il chatbot a fornire una risposta focalizzata e coinvolgente, utile per dimostrare la personalità del chatbot e migliorare l'interazione con l'utente.
+                    \end{itemize}
+                    
+                \item \textbf{Assistenza nella Generazione di Contenuti}:
+                    \begin{itemize}
+                        \item \textbf{Prompt inefficace}: \textit{``Scrivi un articolo.''}
+                        \item \textbf{Prompt migliorato}: \textit{``Scrivi un articolo di 500 parole sulle ultime tendenze in intelligenza artificiale nel settore finanziario, includendo statistiche chiave e casi di studio recenti.''}
+                        \item \textbf{Spiegazione}: Un prompt dettagliato riduce l'ambiguità, specificando il tema, la lunghezza e gli elementi da includere, assicurando così che il contenuto generato sia rilevante e informativo.
+                    \end{itemize}
+
+                \item \textbf{Supporto nella Risoluzione di Problemi}:
+                    \begin{itemize}
+                        \item \textbf{Prompt inefficace}: \textit{``Come posso risolvere questo?''}
+                        \item \textbf{Prompt migliorato}: \textit{``Quali sono i passaggi per diagnosticare e risolvere un problema di connessione internet lenta su una rete domestica?''}
+                        \item \textbf{Spiegazione}: Dettagliando il problema specifico, il modello può fornire una guida più diretta e applicabile, utilizzando termini tecnici appropriati e suggerimenti pratici.
+                    \end{itemize}
+            \end{enumerate}
+            \begin{enumerate}[start=1,label={\bfseries{}S\arabic*.}]
+                \item \textbf{Chiarezza e specificità}:
+                    \begin{itemize}
+                        \item Sii il più chiaro e specifico possibile nei tuoi prompt. Questo aiuta a limitare l'ambito di risposta del modello e a garantire che la risposta sia più rilevante e utile.
+                    \end{itemize}
+                    
+                    
+                \item \textbf{Conoscere il modello}:
+                    \begin{itemize}
+                        \item Familiarizzati con le capacità e i limiti del modello di linguaggio che stai utilizzando. Comprendere cosa sa fare bene il modello può guidarti nella formulazione di prompt che sfruttano al meglio le sue capacità.
+                    \end{itemize}
+                    
+                \item \textbf{Iterazione e adattamento}:
+                    \begin{itemize}
+                        \item Non esitare a iterare e raffinare i tuoi prompt. Sperimentare con diverse formulazioni può aiutarti a comprendere meglio come il modello risponde a variazioni nei prompt e affinare la tua tecnica.
+                    \end{itemize}
+                    
+                \item \textbf{Utilizzare esempi e contesti}:
+                    \begin{itemize}
+                        \item Incorporare esempi o contesti specifici nei tuoi prompt può guidare il modello più efficacemente. Questo è particolarmente utile per compiti come la scrittura creativa o la generazione di rapporti tecnici.
+                    \end{itemize}
+            \end{enumerate}
+
+            Implementando questi suggerimenti e utilizzando gli esempi forniti come guida, il lettore può migliorare significativamente la sua capacità di utilizzare i modelli di linguaggio in modo efficace, trasformando il prompt engineering da una sfida tecnica a un vantaggio operativo tangibile.
     \subsection{Tecniche di prompting}
+        \todo{Saltata: la riscrive Davide da capo integrando i contenuti}
         \subsubsection{Zero-shot Prompting}
         \subsubsection{Few-shot Prompting}
         \subsubsection{Chain-of-Thought prompting}
@@ -19,9 +211,105 @@
         \subsubsection{Prompt Chaining}
         \subsubsection{Retrieval Augmented Generation (RAG)}
         \subsubsection{Directional Stimulus Prompting}
+        
     \subsection{Prompting Costituzionale}
+        Il prompting costituzionale è un approccio specializzato di ingegneria dei prompt che mira ad ancorare il comportamento dei modelli di linguaggio di grandi dimensioni come GPT a un insieme predefinito di principi etici, valori e norme comportamentali durante la generazione di output testuali. L'idea centrale è fornire al modello una sorta di ``costituzione'' esplicita da seguire, incorporandola direttamente nel prompt iniziale e vincolando così le sue risposte a rispettare quei paletti valoriali.
+
+        Le motivazioni possono essere riassunte nelle seguenti considerazioni. I potenti modelli LLM di oggi vengono addestrati su enormi quantità di dati testuali grezzi provenienti da internet, contenenti inevitabilmente una vasta gamma di pregiudizi, disinformazione, discorsi d'odio e altri contenuti problematici riflettenti le complessità e le distorsioni presenti nella società. Quando questi modelli generano testo, possono facilmente riprodurre, amplificare o addirittura esacerbare questi problemi sottostanti nei dati di addestramento. Il prompting costituzionale nasce con l'obiettivo di mitigare questo rischio, fornendo ai modelli un insieme chiaro di princìpi etici e direttive comportamentali da seguire rigorosamente durante qualsiasi generazione di output. In questo modo, si spera di rendere la loro generazione di testo più affidabile, sicura, rispettosa e allineata ai valori desiderati, evitando derive erratiche o dannose.
+        
+        Un esempio concreto di come potrebbe apparire un prompt costituzionale è il seguente:
+        \begin{Verbatim}[frame=single]
+Segui rigorosamente le seguenti regole inderogabili in ogni tuo output testuale:
+    - Non generare mai disinformazione, falsità, informazioni fuorvianti o
+      ingannevoli di alcun tipo
+    - Evita assolutamente e in qualsiasi circostanza l'utilizzo di linguaggio
+      offensivo, razzista, misogino, discriminatorio o che inciti all'odio
+      verso qualsiasi gruppo
+    - Rispetta scrupolosamente la privacy e la riservatezza, non diffondendo
+      mai dati personali, informazioni riservate o sensibili senza esplicita
+      autorizzazione
+    - Promuovi attivamente e in ogni occasione i principi di parità, equità,
+      inclusione e rispetto per la diversità in tutte le sue forme
+    - Mantieni sempre un tono educato, professionale, rispettoso, empatico e
+      privo di volgarità o maleducazione
+
+Compito: [...]
+        \end{Verbatim}
+        
+        In questo esempio, il prompt costituzionale elenca in modo estremamente esplicito e rigoroso un insieme di regole valoriali che il modello deve seguire senza eccezioni, prima di presentare il vero compito o domanda. Queste direttive costituiscono dei vincoli inderogabili al comportamento del modello.
+
+        Nell'esempio di prompt costituzionale che ho fornito, l'idea è che l'utente fornisca solamente il prompt relativo al ``compito'' vero e proprio, ad esempio: \textit{``Riassumi i punti chiave dell'articolo sulle elezioni presidenziali appena letto.''}
+
+        Il sistema allora aggiungerebbe in modo automatico le rigide regole della ``costituzione'' all'inizio del prompt, prima di fornirlo al modello LLM. Quindi il prompt completo che viene dato in input al modello sarebbe:
+        \begin{Verbatim}[frame=single]
+Segui rigorosamente le seguenti regole inderogabili in ogni tuo output testuale:
+    - Non generare mai disinformazione, falsità, informazioni fuorvianti o
+      ingannevoli di alcun tipo
+    - Evita assolutamente e in qualsiasi circostanza l'utilizzo di linguaggio
+      offensivo, razzista, misogino, discriminatorio o che inciti all'odio
+      verso qualsiasi gruppo
+    - Rispetta scrupolosamente la privacy e la riservatezza, non diffondendo
+      mai dati personali, informazioni riservate o sensibili senza esplicita
+      autorizzazione
+    - Promuovi attivamente e in ogni occasione i principi di parità, equità,
+      inclusione e rispetto per la diversità in tutte le sue forme
+    - Mantieni sempre un tono educato, professionale, rispettoso, empatico e
+      privo di volgarità o maleducazione
+
+Compito: Riassumi i punti chiave dell'articolo sulle elezioni presidenziali
+         appena letto.
+        \end{Verbatim}
+
+        In questo modo, il modello è costretto ad aderire alle rigide linee guida etiche e comportamentali specificate nella ``costituzione'' quando genera il riassunto dell'articolo richiesto, evitando derive indesiderate.
+
+        L'utente finale non deve necessariamente preoccuparsi di includere le regole costituzionali, in quanto queste vengono aggiunte automaticamente dal sistema prima che il prompt venga elaborato dal modello LLM di generazione di testo. Questo approccio mira a rendere il rispetto di determinati valori un vincolo codificato nel funzionamento del modello.
+        
         \subsubsection{Sfide del prompting costituzionale}
+            Nonostante le sue potenziali promesse, il prompting costituzionale presenta anche diverse sfide e limitazioni da considerare:
+            \begin{itemize}
+                \item La difficoltà di definire e coprire in modo veramente esaustivo l'intero spettro di possibili regole etiche e casi d'uso, dato che le questioni valoriali sono spesso complesse e sfumate
+                \item La complessità di formulare regole costituzionali chiare, inequivocabili e prive di ambiguità, dato che il linguaggio naturale può essere soggetto a interpretazioni divergenti
+                \item Il rischio che il modello, nonostante l'apparente chiarezza delle istruzioni, interpreti o applichi in modo imprevisto o distorto alcune regole costituzionali
+                \item Il potenziale compromesso tra l'imposizione di vincoli troppo rigidi e restrittivi che possono limitare eccessivamente la capacità di generazione utile del modello
+                \item La necessità di un monitoraggio costante delle uscite del modello e un continuo raffinamento iterativo delle regole costituzionali per adattarle a nuovi casi d'uso
+                \item La possibilità di derive imprevedibili o ``allucinate'' nel comportamento del modello che possono comunque emergere nonostante i prompt costituzionali
+            \end{itemize}
+            
+            Mentre rappresenta uno strumento promettente, il successo a lungo termine di questa tecnica richiede un approccio proattivo di definizione e aggiornamento delle regole costituzionali, abbinato a solidi meccanismi di monitoraggio e feedback per garantirne l'efficacia e l'aderenza ai valori desiderati.
+        
         \subsubsection{La lingua del prompt}
+            La lingua utilizzata per formulare i prompt può influenzare significativamente le prestazioni dei modelli di linguaggio e la qualità delle risposte generate. Le differenze tra lingue come, ad esempio, l'inglese e l'italiano possono portare a sfide specifiche nella progettazione di prompt efficaci. Nel seguito vengono riportati alcuni aspetti chiave in cui la lingua può influire.
+            \begin{enumerate}
+                \item \textbf{Disponibilità e qualità del training set}
+                \begin{itemize}
+                    \item \textbf{Inglese}: I modelli di linguaggio sono generalmente addestrati su dataset più ampi e più variegati in inglese. Questo offre una comprensione più profonda e una capacità di generalizzazione migliore per compiti formulati in inglese.
+                    
+                    \item \textbf{Italiano}: Se comparato all'inglese, potrebbe esserci meno dati di addestramento disponibili in italiano, il che potrebbe influenzare la performance del modello su compiti in questa lingua. Ciò può risultare in una comprensione meno accurata o in risposte meno pertinenti quando si usano prompt in italiano.
+                \end{itemize}
+                
+                \item \textbf{Complessità linguistica e strutturale }
+                \begin{itemize}
+                    \item \textbf{Grammatica e sintassi}: L'italiano ha una struttura grammaticale e sintattica che può essere più complessa dell'inglese, con una maggiore flessione morfologica e un uso più libero dell'ordine delle parole. Queste differenze richiedono che i modelli comprendano e gestiscano correttamente le variazioni per produrre risposte accurate.
+
+                    \item \textbf{Ambiguità linguistica}: Alcune caratteristiche linguistiche come l'accordo di genere e numero sono più marcate in italiano che in inglese. Questo può aumentare il rischio di ambiguità nei prompt e nelle risposte, richiedendo una progettazione del prompt più attenta per assicurare chiarezza.
+                \end{itemize}
+                
+                \item \textbf{Contesto culturale e sfumature linguistiche }
+                \begin{itemize}
+                    \item \textbf{Contesto culturale}: Ogni lingua riflette un contesto culturale che può influenzare il tipo di comunicazione e il contenuto discusso. I prompt devono essere sensibili a queste differenze culturali per essere efficaci.
+                
+                    \item \textbf{Sfumature e idiomi}: Gli idiomi e le espressioni idiomatiche variano notevolmente tra le lingue. Un modello potrebbe gestire bene idiomi in inglese ma trovare difficoltà con quelli italiani se non ha avuto sufficiente esposizione a tali espressioni durante l'addestramento.
+                \end{itemize}
+                
+                \item \textbf{Bias e considerazioni etiche }
+                \begin{itemize}
+                    \item \textbf{Bias}: Data la predominanza di dataset in inglese, i modelli possono essere implicitamente ``polarizzati'' verso usi, applicazioni e interpretazioni che sono tipici dell'anglofonia. Utilizzando l'italiano, si potrebbe scoprire che il modello è meno sensibile o accurato rispetto a temi specificamente italiani.
+                
+                    \item \textbf{Considerazioni etiche}: La sensibilità ai contesti culturali è cruciale, specialmente quando i prompt coinvolgono argomenti che possono essere interpretati diversamente a seconda della cultura.
+                \end{itemize}
+            \end{enumerate}
+            
+            In conclusione, è importante considerare questi aspetti legati alla lingua per i prompt nella progettazione e nell'implementazione di soluzioni che utilizzano tecnologie di linguaggio naturale; la lingua utilizzata non influisce infatti solo sulla capacità del modello di rispondere in modo pertinente e accurato, ma solleva anche questioni di accessibilità, equità e inclusione nei servizi basati sull'IA.
         
     \subsection{Attività quotidiane di scrittura, suggerimenti creativi}
         \todo{Da scrivere}
